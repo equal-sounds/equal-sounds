@@ -9,20 +9,21 @@
 /* Begin PBXBuildFile section */
 		90213107256A190A007FDF56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90213106256A190A007FDF56 /* AppDelegate.swift */; };
 		90213109256A190A007FDF56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90213108256A190A007FDF56 /* SceneDelegate.swift */; };
-		9021310B256A190A007FDF56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021310A256A190A007FDF56 /* ViewController.swift */; };
+		9021310B256A190A007FDF56 /* homeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021310A256A190A007FDF56 /* homeScreenViewController.swift */; };
 		9021310E256A190A007FDF56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9021310C256A190A007FDF56 /* Main.storyboard */; };
 		90213110256A190C007FDF56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9021310F256A190C007FDF56 /* Assets.xcassets */; };
 		90213113256A190C007FDF56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90213111256A190C007FDF56 /* LaunchScreen.storyboard */; };
 		90213122256A1B6C007FDF56 /* Equal-Sounds.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90213120256A1B6C007FDF56 /* Equal-Sounds.xcdatamodeld */; };
 		90213126256A1CD9007FDF56 /* Configuration+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90213124256A1CD9007FDF56 /* Configuration+CoreDataClass.swift */; };
 		90213127256A1CD9007FDF56 /* Configuration+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90213125256A1CD9007FDF56 /* Configuration+CoreDataProperties.swift */; };
+		90A0FCF82577327F0083D21C /* equalizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A0FCF72577327F0083D21C /* equalizerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		90213103256A190A007FDF56 /* equal sounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "equal sounds.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90213106256A190A007FDF56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90213108256A190A007FDF56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9021310A256A190A007FDF56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9021310A256A190A007FDF56 /* homeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeScreenViewController.swift; sourceTree = "<group>"; };
 		9021310D256A190A007FDF56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9021310F256A190C007FDF56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90213112256A190C007FDF56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +31,7 @@
 		90213121256A1B6C007FDF56 /* Equal-Sounds.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Equal-Sounds.xcdatamodel"; sourceTree = "<group>"; };
 		90213124256A1CD9007FDF56 /* Configuration+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Configuration+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		90213125256A1CD9007FDF56 /* Configuration+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Configuration+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		90A0FCF72577327F0083D21C /* equalizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = equalizerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +68,8 @@
 				90213125256A1CD9007FDF56 /* Configuration+CoreDataProperties.swift */,
 				90213106256A190A007FDF56 /* AppDelegate.swift */,
 				90213108256A190A007FDF56 /* SceneDelegate.swift */,
-				9021310A256A190A007FDF56 /* ViewController.swift */,
+				9021310A256A190A007FDF56 /* homeScreenViewController.swift */,
+				90A0FCF72577327F0083D21C /* equalizerViewController.swift */,
 				9021310C256A190A007FDF56 /* Main.storyboard */,
 				9021310F256A190C007FDF56 /* Assets.xcassets */,
 				90213111256A190C007FDF56 /* LaunchScreen.storyboard */,
@@ -146,9 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9021310B256A190A007FDF56 /* ViewController.swift in Sources */,
+				9021310B256A190A007FDF56 /* homeScreenViewController.swift in Sources */,
 				90213126256A1CD9007FDF56 /* Configuration+CoreDataClass.swift in Sources */,
 				90213127256A1CD9007FDF56 /* Configuration+CoreDataProperties.swift in Sources */,
+				90A0FCF82577327F0083D21C /* equalizerViewController.swift in Sources */,
 				90213107256A190A007FDF56 /* AppDelegate.swift in Sources */,
 				90213122256A1B6C007FDF56 /* Equal-Sounds.xcdatamodeld in Sources */,
 				90213109256A190A007FDF56 /* SceneDelegate.swift in Sources */,
