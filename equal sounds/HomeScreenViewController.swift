@@ -32,7 +32,7 @@ class HomeScreenViewController: UIViewController
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.path)
     }
     
     @IBAction func showEQ(_ sender: Any)

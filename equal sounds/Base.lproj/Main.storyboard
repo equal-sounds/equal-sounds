@@ -106,35 +106,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="BAF-wi-ZIT">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="BAF-wi-ZIT">
                                 <rect key="frame" x="-345" y="406" width="731.5" height="31"/>
+                                <connections>
+                                    <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="1Da-Nw-JFe"/>
+                                </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="txP-sw-o4j">
+                            <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="txP-sw-o4j">
                                 <rect key="frame" x="-303.5" y="406" width="731" height="31"/>
+                                <connections>
+                                    <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="G5W-ur-kXw"/>
+                                </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="krj-Xe-i3l">
+                            <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="krj-Xe-i3l">
                                 <rect key="frame" x="-262" y="406" width="731" height="31"/>
+                                <connections>
+                                    <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="8RM-Y5-fGs"/>
+                                </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="aN8-db-cNj">
+                            <slider opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="aN8-db-cNj">
                                 <rect key="frame" x="-220.5" y="406" width="731" height="31"/>
+                                <connections>
+                                    <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="xN7-jM-Jm8"/>
+                                </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rnj-aA-qW5">
+                            <slider opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="rnj-aA-qW5">
                                 <rect key="frame" x="-179.5" y="406" width="731.5" height="31"/>
+                                <connections>
+                                    <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="Pyy-H6-qBp"/>
+                                </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ydo-Wc-nxi">
-                                <rect key="frame" x="-96.5" y="406" width="731" height="31"/>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="34T-su-hgE">
-                                <rect key="frame" x="-55" y="406" width="731" height="31"/>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wSZ-Yz-IfU">
-                                <rect key="frame" x="-13.5" y="406" width="731" height="31"/>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vS2-bM-Dcv">
-                                <rect key="frame" x="27.5" y="406" width="731.5" height="31"/>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="aIr-RZ-rS4">
+                            <slider opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="aIr-RZ-rS4">
                                 <rect key="frame" x="-138" y="406" width="731.5" height="31"/>
+                                <connections>
+                                    <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="3RA-cd-iCh"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ydo-Wc-nxi">
+                                <rect key="frame" x="-96.5" y="406" width="731" height="31"/>
+                                <connections>
+                                    <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="vep-RU-KGK"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="34T-su-hgE">
+                                <rect key="frame" x="-55" y="406" width="731" height="31"/>
+                                <connections>
+                                    <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="OjR-bH-erc"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="wSZ-Yz-IfU">
+                                <rect key="frame" x="-13.5" y="406" width="731" height="31"/>
+                                <connections>
+                                    <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="dqJ-FN-UfF"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="vS2-bM-Dcv">
+                                <rect key="frame" x="27.5" y="406" width="731.5" height="31"/>
+                                <connections>
+                                    <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="zNa-gO-w9X"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1l7-M1-Csd"/>

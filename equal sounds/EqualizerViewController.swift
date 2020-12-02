@@ -20,6 +20,7 @@ class EqualizerViewController: UIViewController
     @IBOutlet var fourKHZSlider: UISlider!
     @IBOutlet var eightKHZSlider: UISlider!
     @IBOutlet var sixteenKHZSlider: UISlider!
+    let equalizerController = EqualizerController()
     
     override func viewDidLoad()
     {
@@ -36,10 +37,32 @@ class EqualizerViewController: UIViewController
         eightKHZSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
         sixteenKHZSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
         // Do any additional setup after loading the view.
+        async
+        {
+            if let eq = self.equalizerController
+            {
+                    try? eq.startPlayer()
+            }
+        }
     }
     
-
+    @IBAction func eqSliderValueChanged(_ sender: UISlider)
+    {
+        let tag = sender.tag
+        let val = sender.value
+        async
+        {
+            self.equalizerController?.adjustEqualizer(at: tag, to: val)
+        }
+    }
     
+    override func viewDidDisappear(_ animated: Bool)
+    {
+        async
+        {
+            self.equalizerController?.stopPlayer()
+        }
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
