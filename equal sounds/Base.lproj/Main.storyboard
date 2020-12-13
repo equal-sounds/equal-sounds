@@ -201,45 +201,30 @@
                                         </subviews>
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="StP-3C-uiK">
-                                        <rect key="frame" x="12" y="63.5" width="390" height="31"/>
+                                        <rect key="frame" x="-2" y="63.5" width="418" height="31"/>
                                     </slider>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="-54" translatesAutoresizingMaskIntoConstraints="NO" id="Byb-7r-jTk">
-                                        <rect key="frame" x="92.5" y="103.5" width="229.5" height="22"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-175" translatesAutoresizingMaskIntoConstraints="NO" id="Byb-7r-jTk">
+                                        <rect key="frame" x="0.0" y="103.5" width="414" height="22"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhB-7j-EzV">
-                                                <rect key="frame" x="0.0" y="0.0" width="129" height="22"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="254.5" height="22"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
-                                                <state key="normal" title="Fast Forward" image="backward.fill" catalog="system"/>
+                                                <state key="normal" title="Rewind" image="backward.fill" catalog="system"/>
                                                 <connections>
                                                     <action selector="rewindButton:" destination="FkA-d9-G9O" eventType="touchUpInside" id="CZ7-7y-dUQ"/>
                                                     <action selector="rewindButton:" destination="H1T-yL-nRd" eventType="touchUpInside" id="iAv-bg-dev"/>
                                                 </connections>
                                             </button>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="-33" translatesAutoresizingMaskIntoConstraints="NO" id="euk-yc-WUQ">
-                                                <rect key="frame" x="75" y="0.0" width="79.5" height="22"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Vs-b1-t2e">
-                                                        <rect key="frame" x="0.0" y="0.0" width="49" height="22"/>
-                                                        <color key="tintColor" systemColor="labelColor"/>
-                                                        <state key="normal" title="Play" image="play.fill" catalog="system"/>
-                                                        <connections>
-                                                            <action selector="playButton:" destination="H1T-yL-nRd" eventType="touchUpInside" id="bid-Bg-JbI"/>
-                                                            <action selector="playButton:" destination="FkA-d9-G9O" eventType="touchUpInside" id="vw4-qe-Vw4"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XR9-7s-y4e">
-                                                        <rect key="frame" x="16" y="0.0" width="63.5" height="22"/>
-                                                        <color key="tintColor" systemColor="labelColor"/>
-                                                        <state key="normal" title="Pause" image="pause.fill" catalog="system"/>
-                                                        <connections>
-                                                            <action selector="pauseButton:" destination="H1T-yL-nRd" eventType="touchUpInside" id="7Ul-jN-Hc4"/>
-                                                            <action selector="pauseButton:" destination="FkA-d9-G9O" eventType="touchUpInside" id="Mco-DL-ONp"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5B8-LE-Yz1">
+                                                <rect key="frame" x="79.5" y="0.0" width="255" height="22"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <state key="normal" title="playpause" image="playpause.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="playpause:" destination="FkA-d9-G9O" eventType="touchUpInside" id="BcK-66-twI"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax6-dX-ut7">
-                                                <rect key="frame" x="100.5" y="0.0" width="129" height="22"/>
+                                                <rect key="frame" x="159.5" y="0.0" width="254.5" height="22"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <state key="normal" title="Fast Forward" image="forward.fill" catalog="system"/>
                                                 <connections>
@@ -249,6 +234,10 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Byb-7r-jTk" secondAttribute="trailing" id="I84-iK-egb"/>
+                                    <constraint firstItem="Byb-7r-jTk" firstAttribute="leading" secondItem="Xi2-JE-kGc" secondAttribute="leading" id="YYP-g8-Qx2"/>
+                                </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LBb-4Q-04w">
                                 <rect key="frame" x="4" y="92" width="406" height="381"/>
@@ -440,8 +429,7 @@
     <resources>
         <image name="backward.fill" catalog="system" width="128" height="79"/>
         <image name="forward.fill" catalog="system" width="128" height="79"/>
-        <image name="pause.fill" catalog="system" width="116" height="128"/>
-        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <image name="playpause.fill" catalog="system" width="128" height="70"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -29,21 +29,20 @@ class nowPlayingViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func playButton(_ sender: UIButton)
+    @IBAction func playpause(_ sender: UIButton)
     {
-        
+        // play
         if let eq = self.equalizerController
         {
             try? eq.startPlayer()
         }
-    }
-    @IBAction func pauseButton(_ sender: UIButton)
-    {
+        // pause
         async
         {
             self.equalizerController?.stopPlayer()
         }
     }
+    
     @IBAction func fastForwardButton(_ sender: Any)
     {
     }
