@@ -10,7 +10,7 @@ import UIKit
 class nowPlayingViewController: UIViewController {
     
     
-    let equalizerController = EqualizerController()
+    let audioController = AudioController()
     @IBOutlet var songNameLabel: UILabel!
     @IBOutlet var artistLabel: UILabel!
     @IBOutlet var albumLabel: UILabel!
@@ -19,11 +19,7 @@ class nowPlayingViewController: UIViewController {
     
     override func viewDidLoad()
     {
-        
-        if let eq = self.equalizerController
-        {
-            try? eq.startPlayer()
-        }
+		try? self.audioController.startPlayer() //demo and testing only
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
@@ -31,21 +27,17 @@ class nowPlayingViewController: UIViewController {
     
     @IBAction func playpause(_ sender: UIButton)
     {
-        // play
-        if let eq = self.equalizerController
-        {
-            try? eq.startPlayer()
-        }
-        // pause
+        // playpause
         async
         {
-            self.equalizerController?.stopPlayer()
+            self.audioController.playPausePlayer()
         }
     }
     
     @IBAction func fastForwardButton(_ sender: Any)
     {
     }
+	
     @IBAction func rewindButton(_ sender: Any)
     {
     }
