@@ -21,6 +21,10 @@
 		90213122256A1B6C007FDF56 /* Equal-Sounds.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90213120256A1B6C007FDF56 /* Equal-Sounds.xcdatamodeld */; };
 		90213126256A1CD9007FDF56 /* Configuration+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90213124256A1CD9007FDF56 /* Configuration+CoreDataClass.swift */; };
 		90213127256A1CD9007FDF56 /* Configuration+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90213125256A1CD9007FDF56 /* Configuration+CoreDataProperties.swift */; };
+		90F1FE2D2585ABFB002BCFB2 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F1FE2C2585ABFB002BCFB2 /* Song.swift */; };
+		90F1FE302585ACAE002BCFB2 /* nowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F1FE2F2585ACAE002BCFB2 /* nowPlayingViewController.swift */; };
+		90F1FE332585B6AB002BCFB2 /* songsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F1FE322585B6AB002BCFB2 /* songsTableViewController.swift */; };
+		90F1FE362585B7B7002BCFB2 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F1FE352585B7B7002BCFB2 /* SongTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		90213121256A1B6C007FDF56 /* Equal-Sounds.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Equal-Sounds.xcdatamodel"; sourceTree = "<group>"; };
 		90213124256A1CD9007FDF56 /* Configuration+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Configuration+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		90213125256A1CD9007FDF56 /* Configuration+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Configuration+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		90F1FE2C2585ABFB002BCFB2 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		90F1FE2F2585ACAE002BCFB2 /* nowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nowPlayingViewController.swift; sourceTree = "<group>"; };
+		90F1FE322585B6AB002BCFB2 /* songsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = songsTableViewController.swift; sourceTree = "<group>"; };
+		90F1FE352585B7B7002BCFB2 /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,10 @@
 				90213106256A190A007FDF56 /* AppDelegate.swift */,
 				90213108256A190A007FDF56 /* SceneDelegate.swift */,
 				9021310C256A190A007FDF56 /* Main.storyboard */,
+				90F1FE2C2585ABFB002BCFB2 /* Song.swift */,
+				90F1FE2F2585ACAE002BCFB2 /* nowPlayingViewController.swift */,
+				90F1FE322585B6AB002BCFB2 /* songsTableViewController.swift */,
+				90F1FE352585B7B7002BCFB2 /* SongTableViewCell.swift */,
 				9021310F256A190C007FDF56 /* Assets.xcassets */,
 				90213111256A190C007FDF56 /* LaunchScreen.storyboard */,
 				90213114256A190C007FDF56 /* Info.plist */,
@@ -162,14 +174,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90F1FE302585ACAE002BCFB2 /* nowPlayingViewController.swift in Sources */,
 				36D164B52577DB7E0048D59E /* EqualizerViewController.swift in Sources */,
 				90213126256A1CD9007FDF56 /* Configuration+CoreDataClass.swift in Sources */,
 				90213127256A1CD9007FDF56 /* Configuration+CoreDataProperties.swift in Sources */,
 				90213107256A190A007FDF56 /* AppDelegate.swift in Sources */,
 				36D164AC2577BF5C0048D59E /* EqualizerBand.swift in Sources */,
+				90F1FE2D2585ABFB002BCFB2 /* Song.swift in Sources */,
 				90213122256A1B6C007FDF56 /* Equal-Sounds.xcdatamodeld in Sources */,
 				36D164992577BA430048D59E /* EqualizerController.swift in Sources */,
 				36D164982577BA430048D59E /* Thread+Async.swift in Sources */,
+				90F1FE362585B7B7002BCFB2 /* SongTableViewCell.swift in Sources */,
+				90F1FE332585B6AB002BCFB2 /* songsTableViewController.swift in Sources */,
 				90213109256A190A007FDF56 /* SceneDelegate.swift in Sources */,
 				36D164B92577DBB70048D59E /* HomeScreenViewController.swift in Sources */,
 			);
