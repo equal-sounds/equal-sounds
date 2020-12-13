@@ -9,6 +9,7 @@ import UIKit
 
 class SongTableViewCell: UITableViewCell {
 
+    
     @IBOutlet var songNameLabel: UILabel!
     @IBOutlet var artistLabel: UILabel!
     override func awakeFromNib() {

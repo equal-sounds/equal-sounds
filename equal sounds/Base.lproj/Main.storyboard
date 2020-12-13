@@ -112,7 +112,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" id="KOc-rz-KLN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" id="KOc-rz-KLN" customClass="SongTableViewCell" customModule="equal_sounds" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KOc-rz-KLN" id="YgS-8e-Uoi">
@@ -144,10 +144,16 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="artistLabel" destination="gq0-zq-zjo" id="xdM-6N-mbi"/>
+                                            <outlet property="songNameLabel" destination="DVw-Ip-vXh" id="bOw-xb-e5r"/>
                                             <segue destination="FkA-d9-G9O" kind="show" identifier="NowPlayingSegue" id="Fer-en-69H"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="0wx-Fo-Sm8" id="PtX-1O-lb1"/>
+                                    <outlet property="delegate" destination="0wx-Fo-Sm8" id="jgG-n3-zCm"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CYx-7D-gON"/>
