@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="20B29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Configuration" representedClassName="Configuration" syncable="YES">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19H15" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="EqualizerSavedConfiguration" representedClassName="EqualizerSavedConfiguration" syncable="YES">
         <attribute name="name" attributeType="String"/>
+        <relationship name="frequencySettings" toMany="YES" deletionRule="Cascade" destinationEntity="FrequencySetting" inverseName="configuration" inverseEntity="FrequencySetting"/>
+    </entity>
+    <entity name="FrequencySetting" representedClassName="FrequencySetting" syncable="YES">
+        <attribute name="frequency" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="gain" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="configuration" maxCount="1" deletionRule="Nullify" destinationEntity="EqualizerSavedConfiguration" inverseName="frequencySettings" inverseEntity="EqualizerSavedConfiguration"/>
     </entity>
     <elements>
-        <element name="Configuration" positionX="-54" positionY="-9" width="128" height="44"/>
+        <element name="EqualizerSavedConfiguration" positionX="-568.6015625" positionY="-167.421875" width="168.31640625" height="73"/>
+        <element name="FrequencySetting" positionX="-236.76953125" positionY="-182.60546875" width="128" height="88"/>
     </elements>
 </model>

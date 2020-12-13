@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import AVFoundation //uncertain if both are needed or just AVFoundation works
+import AVFoundation //uncertain if both are needed or just AVFoundation works -- leaning towards both but still interested in actual answer
 
 
 class AudioController
@@ -88,7 +88,7 @@ class AudioController
 	}
 	
 	//call in background
-	func preparePlayer(using fileUrl: URL)
+	func preparePlayer(for fileUrl: URL)
 	{
 		self.player.openFile(at: fileUrl)
 	}
@@ -135,12 +135,34 @@ class AudioController
     {
 		self.equalizer.adjust(atFrequency: band, to: gain)
     }
-    
+	
+	//should be able to call in background
+	func toggleEqualizer(enable: Bool)
+	{
+		if enable //switch toggle on/off state
+		{
+			engine.connect(player, to: equalizer, format: player.format)
+			engine.connect(equalizer, to: engine.outputNode, format: nil)
+			engine.disconnectNodeInput(engine.mainMixerNode) //may need to disconnect first
+			engine.disconnectNodeOutput(engine.mainMixerNode)
+		} else {
+			engine.connect(player, to: engine.mainMixerNode, format: player.format)
+			engine.connect(engine.mainMixerNode, to: engine.outputNode, format: nil)
+			engine.disconnectNodeInput(equalizer) //may need to disconnect first
+			engine.disconnectNodeOutput(equalizer)
+		}
+	}
+	
     // call in background
     func adjustEqualizer(at index: Int, to gain: Float)
     {
 		self.equalizer.adjust(at: index, to: gain)
     }
+	
+	func exportEqualizerConfiguration(as name: String) -> (EqualizerSavedConfiguration, [FrequencySetting])
+	{
+		self.equalizer.exportCurrentConfiguration(as: name)
+	}
 	
 	
 	

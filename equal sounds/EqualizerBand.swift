@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum EqualizerBand: Int, CaseIterable
+enum EqualizerBand: Float, CaseIterable
 {
     case thirtyOneHz = 31
     case sixtyTwoHz = 62
@@ -23,6 +23,6 @@ enum EqualizerBand: Int, CaseIterable
 
 extension EqualizerBand
 {
-    static let baseBand: Int = EqualizerBand.allCases.first?.rawValue ?? 0
+	static let baseBand: Float = EqualizerBand.allCases.first?.rawValue ?? 0
 }
 

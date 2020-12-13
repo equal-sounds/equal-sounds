@@ -26,6 +26,8 @@ class Player: AVAudioPlayerNode
 	var canBeResumed: Bool
 	var isPlayable: Bool
 	
+	//MARK:- Player Internal
+	
 	override init()
 	{
 		duration = 0
@@ -37,6 +39,7 @@ class Player: AVAudioPlayerNode
 		super.init()
 	}
 	
+	// There is no good way to extract the current time played within file apparently; there's a way to do it, but when not playing it always returns 0. Using a synchronized timer instead for reliable results
 	private func startTimer()
 	{
 		if timer == nil
@@ -57,6 +60,7 @@ class Player: AVAudioPlayerNode
 		}
 	}
 	
+	//available externally but low usage expected, primarily intended for internal use
 	func openFile(at url: URL)// -> Bool
 	{
 		if url.path == ""
@@ -65,15 +69,14 @@ class Player: AVAudioPlayerNode
 		}
 		do
 		{
-			if let fileDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+			if url.isFileURL
 			{
-				let fileUrl = fileDirectory.appendingPathComponent(url.path)
-				print(fileUrl.path)
+				print(url.path)
 				print("loading song")
-				try audioFile = AVAudioFile(forReading: fileUrl)
+				try audioFile = AVAudioFile(forReading: url)
 				print("loaded song")
 			} else {
-				print("oof documents directory no find")
+				print("oof path is a directory, need file")
 				return //false
 			}
 		} catch {
@@ -83,6 +86,8 @@ class Player: AVAudioPlayerNode
 		self.scheduleFile(audioFile!, at: nil, completionHandler: nil)
 		//return true
 	}
+	
+	//MARK:- Player Controls
 	
 	override func play()
 	{
@@ -164,6 +169,7 @@ class Player: AVAudioPlayerNode
 	}
 }
 
+//MARK:- AVAudioFile Extension
 extension AVAudioFile
 {
 	var duration: TimeInterval
