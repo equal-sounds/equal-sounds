@@ -20,7 +20,7 @@ class EqualizerViewController: UIViewController
     @IBOutlet var fourKHZSlider: UISlider!
     @IBOutlet var eightKHZSlider: UISlider!
     @IBOutlet var sixteenKHZSlider: UISlider!
-    let equalizerController = EqualizerController()
+    let audioController = AudioController() // this should actually be initialized in app's primary viewDidLoad and pass it around during segues
     
     override func viewDidLoad()
     {
@@ -39,10 +39,8 @@ class EqualizerViewController: UIViewController
         // Do any additional setup after loading the view.
         async
         {
-            if let eq = self.equalizerController
-            {
-                    try? eq.startPlayer()
-            }
+			// demo & testing only as far as i'm concerned - we dont need sound to start whenever the eq gets opened
+			try? self.audioController.startPlayer(using: FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("song").appendingPathExtension("mp3"))
         }
     }
     
@@ -52,15 +50,16 @@ class EqualizerViewController: UIViewController
         let val = sender.value
         async
         {
-            self.equalizerController?.adjustEqualizer(at: tag, to: val)
+            self.audioController.adjustEqualizer(at: tag, to: val)
         }
     }
     
     override func viewDidDisappear(_ animated: Bool)
     {
+		//for demo and testing purposes
         async
         {
-            self.equalizerController?.stopPlayer()
+            self.audioController.stopPlayer()
         }
     }
     // MARK: - Navigation

@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36B336C425859E080089E293 /* Equalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B336C325859E080089E293 /* Equalizer.swift */; };
+		36B336C82585B5AA0089E293 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B336C72585B5AA0089E293 /* Player.swift */; };
 		36D164982577BA430048D59E /* Thread+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D164962577BA430048D59E /* Thread+Async.swift */; };
-		36D164992577BA430048D59E /* EqualizerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D164972577BA430048D59E /* EqualizerController.swift */; };
+		36D164992577BA430048D59E /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D164972577BA430048D59E /* AudioController.swift */; };
 		36D164AC2577BF5C0048D59E /* EqualizerBand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D164AB2577BF5C0048D59E /* EqualizerBand.swift */; };
 		36D164B12577D8CF0048D59E /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 36D164B02577D8CE0048D59E /* song.mp3 */; };
 		36D164B52577DB7E0048D59E /* EqualizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D164B42577DB7E0048D59E /* EqualizerViewController.swift */; };
@@ -28,8 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36B336C325859E080089E293 /* Equalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equalizer.swift; sourceTree = "<group>"; };
+		36B336C72585B5AA0089E293 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		36D164962577BA430048D59E /* Thread+Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Thread+Async.swift"; sourceTree = "<group>"; };
-		36D164972577BA430048D59E /* EqualizerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualizerController.swift; sourceTree = "<group>"; };
+		36D164972577BA430048D59E /* AudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
 		36D164AB2577BF5C0048D59E /* EqualizerBand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualizerBand.swift; sourceTree = "<group>"; };
 		36D164B02577D8CE0048D59E /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
 		36D164B42577DB7E0048D59E /* EqualizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualizerViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +87,7 @@
 			children = (
 				36D164B82577DBB70048D59E /* HomeScreenViewController.swift */,
 				36D164B42577DB7E0048D59E /* EqualizerViewController.swift */,
-				36D164972577BA430048D59E /* EqualizerController.swift */,
+				36D164972577BA430048D59E /* AudioController.swift */,
 				36D164962577BA430048D59E /* Thread+Async.swift */,
 				90213124256A1CD9007FDF56 /* Configuration+CoreDataClass.swift */,
 				90213125256A1CD9007FDF56 /* Configuration+CoreDataProperties.swift */,
@@ -99,6 +103,8 @@
 				90213114256A190C007FDF56 /* Info.plist */,
 				90213120256A1B6C007FDF56 /* Equal-Sounds.xcdatamodeld */,
 				36D164AB2577BF5C0048D59E /* EqualizerBand.swift */,
+				36B336C325859E080089E293 /* Equalizer.swift */,
+				36B336C72585B5AA0089E293 /* Player.swift */,
 			);
 			path = "equal sounds";
 			sourceTree = "<group>";
@@ -179,13 +185,15 @@
 				90213126256A1CD9007FDF56 /* Configuration+CoreDataClass.swift in Sources */,
 				90213127256A1CD9007FDF56 /* Configuration+CoreDataProperties.swift in Sources */,
 				90213107256A190A007FDF56 /* AppDelegate.swift in Sources */,
+				36B336C82585B5AA0089E293 /* Player.swift in Sources */,
 				36D164AC2577BF5C0048D59E /* EqualizerBand.swift in Sources */,
 				90F1FE2D2585ABFB002BCFB2 /* Song.swift in Sources */,
 				90213122256A1B6C007FDF56 /* Equal-Sounds.xcdatamodeld in Sources */,
-				36D164992577BA430048D59E /* EqualizerController.swift in Sources */,
+				36D164992577BA430048D59E /* AudioController.swift in Sources */,
 				36D164982577BA430048D59E /* Thread+Async.swift in Sources */,
 				90F1FE362585B7B7002BCFB2 /* SongTableViewCell.swift in Sources */,
 				90F1FE332585B6AB002BCFB2 /* songsTableViewController.swift in Sources */,
+				36B336C425859E080089E293 /* Equalizer.swift in Sources */,
 				90213109256A190A007FDF56 /* SceneDelegate.swift in Sources */,
 				36D164B92577DBB70048D59E /* HomeScreenViewController.swift in Sources */,
 			);
