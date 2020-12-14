@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="od7-JB-Kf9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="od7-JB-Kf9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -155,8 +155,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="0wx-Fo-Sm8" id="DnT-Bq-EfA"/>
-                                    <outlet property="delegate" destination="0wx-Fo-Sm8" id="TP4-Pt-tTX"/>
+                                    <outlet property="dataSource" destination="VVE-Mk-uvc" id="X8H-NV-4DX"/>
+                                    <outlet property="delegate" destination="VVE-Mk-uvc" id="htu-g7-ChV"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -214,7 +214,7 @@
                                         </subviews>
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="StP-3C-uiK">
-                                        <rect key="frame" x="9.5" y="71.5" width="395" height="31"/>
+                                        <rect key="frame" x="7.5" y="71.5" width="399" height="31"/>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Byb-7r-jTk">
                                         <rect key="frame" x="103.5" y="111.5" width="207" height="22"/>
@@ -231,7 +231,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5B8-LE-Yz1" userLabel="playpause">
-                                                <rect key="frame" x="86" y="0.0" width="35.5" height="22"/>
+                                                <rect key="frame" x="86.5" y="0.0" width="34" height="22"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <state key="normal">
                                                     <imageReference key="image" image="playpause.fill" catalog="system" symbolScale="large"/>
@@ -435,6 +435,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="gH9-OX-wqa"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SYn-2Q-QCH">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -454,7 +455,7 @@
         <image name="forward.fill" catalog="system" width="128" height="79"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="music.note" catalog="system" width="97" height="128"/>
-        <image name="playpause.fill" catalog="system" width="128" height="70"/>
+        <image name="playpause.fill" catalog="system" width="128" height="73"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="speaker.wave.2.fill" catalog="system" width="128" height="90"/>
         <systemColor name="labelColor">
