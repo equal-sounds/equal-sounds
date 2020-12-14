@@ -36,10 +36,12 @@ class nowPlayingViewController: UIViewController {
     
     @IBAction func fastForwardButton(_ sender: Any)
     {
+        audioController.fastForwardPlayer()
     }
 	
     @IBAction func rewindButton(_ sender: Any)
     {
+        audioController.rewindPlayer()
     }
     
     

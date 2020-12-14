@@ -7,7 +7,7 @@
 
 import UIKit
 
-class songsTableViewController: UITableViewController {
+class songsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var songs = [Song]()
 
     override func viewDidLoad() {
@@ -21,16 +21,17 @@ class songsTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0{
-            return songs.count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            if section == 0 {
+                return songs.count
+            }
+            return 0
         }
-        return 0
-    }
+
+   
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = indexPath.row
         let song = songs[row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell", for: indexPath) as! SongTableViewCell
@@ -80,6 +81,7 @@ class songsTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier
         {
@@ -94,6 +96,7 @@ class songsTableViewController: UITableViewController {
             }
         }
     }
+ */
     
 
 }

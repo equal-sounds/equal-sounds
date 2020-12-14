@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="od7-JB-Kf9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="od7-JB-Kf9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home Screen View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeScreenViewController" customModule="equal_sounds" customModuleProvider="target" sceneMemberID="viewController">
@@ -79,10 +79,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o0B-2L-X35" secondAttribute="trailing" id="No1-Sh-zXU"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" selectedImage="house.fill" id="nHN-ah-mtv"/>
                     <navigationItem key="navigationItem" id="Jd5-aV-aV5">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="EQt-9s-JMz">
                             <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="5jR-tg-4Wi">
-                                <rect key="frame" x="20" y="6.5" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
                         </barButtonItem>
@@ -93,14 +93,13 @@
                     <connections>
                         <outletCollection property="configurations" destination="qkT-U5-dt7" collectionClass="NSMutableArray" id="Vzd-Wc-S4n"/>
                         <outletCollection property="configurations" destination="L9I-Ei-H5Z" collectionClass="NSMutableArray" id="i47-j3-h5P"/>
-                        <segue destination="AR3-r6-fqL" kind="showDetail" identifier="showEqualizer" id="D76-2M-zKn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="87.723214285714278"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="87.723214285714278"/>
         </scene>
-        <!--Songs Table View Controller-->
+        <!--Player-->
         <scene sceneID="XHN-Zf-lBf">
             <objects>
                 <viewController id="VVE-Mk-uvc" customClass="songsTableViewController" customModule="equal_sounds" customModuleProvider="target" sceneMemberID="viewController">
@@ -109,7 +108,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nuo-Wf-LFn">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" id="KOc-rz-KLN" customClass="SongTableViewCell" customModule="equal_sounds" customModuleProvider="target">
@@ -136,6 +135,11 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4o-bE-JEh">
+                                                    <rect key="frame" x="292" y="10" width="69" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button" image="music.note" catalog="system"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="yxI-Vt-LZF" secondAttribute="bottom" constant="1.5" id="4M7-xk-LW4"/>
@@ -151,8 +155,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="0wx-Fo-Sm8" id="PtX-1O-lb1"/>
-                                    <outlet property="delegate" destination="0wx-Fo-Sm8" id="jgG-n3-zCm"/>
+                                    <outlet property="dataSource" destination="0wx-Fo-Sm8" id="DnT-Bq-EfA"/>
+                                    <outlet property="delegate" destination="0wx-Fo-Sm8" id="TP4-Pt-tTX"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -165,11 +169,12 @@
                             <constraint firstItem="Nuo-Wf-LFn" firstAttribute="top" secondItem="CYx-7D-gON" secondAttribute="top" id="cGN-2z-B6B"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Player" image="music.note" catalog="system" selectedImage="music.note" id="Jfh-Hl-Xt8"/>
                     <navigationItem key="navigationItem" id="er2-4C-RCD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pmN-LE-mFg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="759"/>
+            <point key="canvasLocation" x="1958" y="759"/>
         </scene>
         <!--Now Playing View Controller-->
         <scene sceneID="bQk-Lv-eYA">
@@ -209,7 +214,7 @@
                                         </subviews>
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="StP-3C-uiK">
-                                        <rect key="frame" x="15.5" y="71.5" width="383" height="31"/>
+                                        <rect key="frame" x="9.5" y="71.5" width="395" height="31"/>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Byb-7r-jTk">
                                         <rect key="frame" x="103.5" y="111.5" width="207" height="22"/>
@@ -226,7 +231,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5B8-LE-Yz1" userLabel="playpause">
-                                                <rect key="frame" x="86.5" y="0.0" width="34" height="22"/>
+                                                <rect key="frame" x="86" y="0.0" width="35.5" height="22"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <state key="normal">
                                                     <imageReference key="image" image="playpause.fill" catalog="system" symbolScale="large"/>
@@ -281,72 +286,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RtV-zo-BfK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="H1T-yL-nRd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1838" y="759"/>
+            <point key="canvasLocation" x="2697" y="759"/>
         </scene>
-        <!--Equalizer View Controller-->
+        <!--Equalizer-->
         <scene sceneID="SJz-d4-bnV">
             <objects>
                 <viewController id="AR3-r6-fqL" customClass="EqualizerViewController" customModule="equal_sounds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UX5-b0-csW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="BAF-wi-ZIT">
-                                <rect key="frame" x="-345" y="406" width="731.5" height="31"/>
+                                <rect key="frame" x="-307.5" y="433" width="656.5" height="31"/>
                                 <connections>
                                     <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="1Da-Nw-JFe"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="txP-sw-o4j">
-                                <rect key="frame" x="-303.5" y="406" width="731" height="31"/>
+                                <rect key="frame" x="-266" y="433" width="656.5" height="31"/>
                                 <connections>
                                     <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="G5W-ur-kXw"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="krj-Xe-i3l">
-                                <rect key="frame" x="-262" y="406" width="731" height="31"/>
+                                <rect key="frame" x="-225" y="433" width="657" height="31"/>
                                 <connections>
                                     <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="8RM-Y5-fGs"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="aN8-db-cNj">
-                                <rect key="frame" x="-220.5" y="406" width="731" height="31"/>
+                                <rect key="frame" x="-183.5" y="433" width="656.5" height="31"/>
                                 <connections>
                                     <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="xN7-jM-Jm8"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="rnj-aA-qW5">
-                                <rect key="frame" x="-179.5" y="406" width="731.5" height="31"/>
+                                <rect key="frame" x="-142" y="433" width="656.5" height="31"/>
                                 <connections>
                                     <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="Pyy-H6-qBp"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="aIr-RZ-rS4">
-                                <rect key="frame" x="-138" y="406" width="731.5" height="31"/>
+                                <rect key="frame" x="-100.5" y="433" width="656.5" height="31"/>
                                 <connections>
                                     <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="3RA-cd-iCh"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ydo-Wc-nxi">
-                                <rect key="frame" x="-96.5" y="406" width="731" height="31"/>
+                                <rect key="frame" x="-59" y="433" width="656.5" height="31"/>
                                 <connections>
                                     <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="vep-RU-KGK"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="34T-su-hgE">
-                                <rect key="frame" x="-55" y="406" width="731" height="31"/>
+                                <rect key="frame" x="-18" y="433" width="657" height="31"/>
                                 <connections>
                                     <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="OjR-bH-erc"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="wSZ-Yz-IfU">
-                                <rect key="frame" x="-13.5" y="406" width="731" height="31"/>
+                                <rect key="frame" x="23.5" y="433" width="656.5" height="31"/>
                                 <connections>
                                     <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="dqJ-FN-UfF"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="vS2-bM-Dcv">
-                                <rect key="frame" x="27.5" y="406" width="731.5" height="31"/>
+                                <rect key="frame" x="65" y="433" width="656.5" height="31"/>
                                 <connections>
                                     <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="zNa-gO-w9X"/>
                                 </connections>
@@ -387,6 +392,7 @@
                             <constraint firstItem="aIr-RZ-rS4" firstAttribute="centerX" secondItem="1l7-M1-Csd" secondAttribute="centerX" multiplier="1.1" id="zJs-W3-gtd"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Equalizer" image="speaker.wave.2.fill" catalog="system" id="neC-km-n1k"/>
                     <connections>
                         <outlet property="OneTwentyFiveHZSlider" destination="krj-Xe-i3l" id="107-br-72C"/>
                         <outlet property="eightKHZSlider" destination="wSZ-Yz-IfU" id="X7a-zh-1gT"/>
@@ -402,7 +408,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZU-lL-9Ft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1837.68115942029" y="87.723214285714278"/>
+            <point key="canvasLocation" x="2747.826086956522" y="87.723214285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wbq-0U-ag9">
@@ -415,37 +421,42 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="469-Gu-Jlw"/>
+                        <segue destination="Pua-DC-FdL" kind="relationship" relationship="rootViewController" id="469-Gu-Jlw"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JfZ-Ab-qi6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="87.723214285714278"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="qZF-1T-hHI">
+        <!--Tab Bar Controller-->
+        <scene sceneID="ZBT-3b-dcf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hfH-nL-7jk" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Pua-DC-FdL" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zjs-nU-bMn">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationItem key="navigationItem" id="gH9-OX-wqa"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SYn-2Q-QCH">
                         <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
                     <connections>
-                        <segue destination="VVE-Mk-uvc" kind="relationship" relationship="rootViewController" id="cH4-Yo-JZU"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ljT-ZU-r3U"/>
+                        <segue destination="VVE-Mk-uvc" kind="relationship" relationship="viewControllers" id="bTM-dT-baD"/>
+                        <segue destination="AR3-r6-fqL" kind="relationship" relationship="viewControllers" id="z1D-jI-L43"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VPw-Jj-wZC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uDJ-Qe-4Vd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="759"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="87.723214285714278"/>
         </scene>
     </scenes>
     <resources>
         <image name="backward.fill" catalog="system" width="128" height="79"/>
         <image name="forward.fill" catalog="system" width="128" height="79"/>
-        <image name="playpause.fill" catalog="system" width="128" height="73"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="music.note" catalog="system" width="97" height="128"/>
+        <image name="playpause.fill" catalog="system" width="128" height="70"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="speaker.wave.2.fill" catalog="system" width="128" height="90"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
