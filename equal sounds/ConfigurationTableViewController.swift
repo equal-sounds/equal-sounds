@@ -14,10 +14,13 @@ class ConfigurationTableViewController: UIViewController, UITableViewDataSource,
     static let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var context: NSManagedObjectContext { ConfigurationTableViewController.context }
     let audioController = AudioController()
+    @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
+        loadSavedConfigurations()
+        tableView.reloadData()
         // Do any additional setup after loading the view.
     }
     
@@ -48,6 +51,7 @@ class ConfigurationTableViewController: UIViewController, UITableViewDataSource,
     {
         async {
             self.audioController.changeEqualizerConfiguration(to: self.savedConfigurations[indexPath.row])
+            tableView.reloadData()
         }
         dismiss(animated: true, completion: nil)
     }
@@ -63,6 +67,7 @@ class ConfigurationTableViewController: UIViewController, UITableViewDataSource,
         context.insert(savedConfiguration)
         savedConfiguration.addToFrequencySettings(NSSet(array: settings))
         saveConfigurations()
+        tableView.reloadData()
     }
     
     func saveConfigurations()
@@ -73,6 +78,7 @@ class ConfigurationTableViewController: UIViewController, UITableViewDataSource,
         } catch {
             print("Failed to save configurations: \(error)")
         }
+        tableView.reloadData()
     }
     
     func loadSavedConfigurations()
@@ -94,6 +100,7 @@ class ConfigurationTableViewController: UIViewController, UITableViewDataSource,
         catch {
             print("Error loading saved configurations: \(error)")
         }
+        tableView.reloadData()
     }
 
     /*
