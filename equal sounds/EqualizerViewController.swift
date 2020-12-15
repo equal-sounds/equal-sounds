@@ -86,6 +86,27 @@ class EqualizerViewController: UIViewController
 			try? self.audioController.startPlayer(using: FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("song").appendingPathExtension("mp3"))
         }*/
     }
+	override func viewDidAppear(_ animated: Bool)
+	{
+		print("update sliders")
+		updateSliders()
+		
+	}
+	
+	 
+	func updateSliders()
+	{
+		self.thirtyOneHZSlider.value = self.audioController.currentGain(for: .thirtyOneHz)!
+		self.sixtyTwoHZSlider.value = self.audioController.currentGain(for: .sixtyTwoHz)!
+		self.OneTwentyFiveHZSlider.value = self.audioController.currentGain(for: .oneTwentyFiveHz)!
+		self.twoFiftyHZSlider.value = self.audioController.currentGain(for: .twoFiftyHz)!
+		self.fiveHundredHZSlider.value = self.audioController.currentGain(for: .fiveHundredHz)!
+		self.oneKHZSlider.value = self.audioController.currentGain(for: .oneKHz)!
+		self.twoKHZSlider.value = self.audioController.currentGain(for: .twoKHz)!
+		self.fourKHZSlider.value = self.audioController.currentGain(for: .fourKHz)!
+		self.eightKHZSlider.value = self.audioController.currentGain(for: .eightKHz)!
+		self.sixteenKHZSlider.value = self.audioController.currentGain(for: .sixteenKHz)!
+	}
 	
 	@IBAction func eqSliderValueChanged(_ sender: UISlider)
 	{

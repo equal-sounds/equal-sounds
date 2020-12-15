@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 
 class AddConfigurationViewController: UIViewController {
-    let audioController = AudioController()
+	let audioController = (UIApplication.shared.delegate as! AppDelegate).audioController
     static let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var context: NSManagedObjectContext { AddConfigurationViewController.context }
     @IBOutlet var addConfigurationNameTextField: UITextField!

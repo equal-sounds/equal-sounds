@@ -175,7 +175,12 @@ class AudioController
 	
 	func changeEqualizerConfiguration(to configuration: EqualizerConfiguration)
 	{
-		print("Hi! I am a stub and need to be completed [changeEqualizerConfiguration(to:)]")
+		equalizer.apply(configuration: configuration)
+	}
+	
+	func currentGain(for band: EqualizerBand) -> Float?
+	{
+		equalizer.currentGain(for: band)
 	}
 	
 	//MARK:- Metadata Operations

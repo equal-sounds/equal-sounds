@@ -13,7 +13,7 @@ class ConfigurationTableViewController: UIViewController, UITableViewDataSource,
     var savedConfigurations = [EqualizerConfiguration]()
     static let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var context: NSManagedObjectContext { ConfigurationTableViewController.context }
-    let audioController = AudioController()
+    let audioController = (UIApplication.shared.delegate as! AppDelegate).audioController
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -40,7 +40,7 @@ class ConfigurationTableViewController: UIViewController, UITableViewDataSource,
     {
         let row = indexPath.row
         let configuration = savedConfigurations[row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CongigurationCell", for: indexPath) as! ConfigurationTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ConfigurationCell", for: indexPath) as! ConfigurationTableViewCell
         cell.update(with: configuration)
         // Configure the cell...
 
@@ -51,7 +51,6 @@ class ConfigurationTableViewController: UIViewController, UITableViewDataSource,
     {
         async {
             self.audioController.changeEqualizerConfiguration(to: self.savedConfigurations[indexPath.row])
-            tableView.reloadData()
         }
         dismiss(animated: true, completion: nil)
     }
@@ -103,6 +102,21 @@ class ConfigurationTableViewController: UIViewController, UITableViewDataSource,
         tableView.reloadData()
     }
 
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) 
+	{
+		if let eqvc = segue.destination as? EqualizerViewController
+		{
+			eqvc.updateSliders()
+		}
+	}
+	
+	override func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
+		if let eqvc = subsequentVC as? EqualizerViewController
+		{
+			eqvc.updateSliders()
+		}
+	}
+	
     /*
     // MARK: - Navigation
 

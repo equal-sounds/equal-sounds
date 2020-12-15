@@ -29,7 +29,7 @@ class Equalizer: AVAudioUnitEQ
 	
 	init(using configuration: EqualizerConfiguration)
 	{
-		currentConfiguration = configuration
+		self.currentConfiguration = configuration
 		print("number of bands: \(configuration.numberOfBands)")
 		super.init(numberOfBands: configuration.numberOfBands) //currently this should always be 10
 		assert(configuration.numberOfBands == EqualizerBand.allCases.count) //verify band count - this line wouldn't be in a release bundle
@@ -65,6 +65,15 @@ class Equalizer: AVAudioUnitEQ
 	func currentGain(for band: EqualizerBand) -> Float?
 	{
 		self.bands.first(where: { $0.frequency == Float(band.rawValue) })?.gain
+	}
+	
+	func apply(configuration: EqualizerConfiguration)
+	{
+		self.currentConfiguration = configuration
+		for i in EqualizerBand.allCases.indices
+		{
+			bands[i].gain = configuration.gainArray[i]
+		}
 	}
 	
 	func exportCurrentConfiguration(as name: String) -> (EqualizerSavedConfiguration, [FrequencySetting])

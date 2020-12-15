@@ -679,6 +679,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="PLg-yz-2z7" id="3ID-U5-X9z"/>
+                                    <outlet property="delegate" destination="PLg-yz-2z7" id="JbC-AF-Bnn"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kib-cX-gOH"/>
