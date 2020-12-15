@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="od7-JB-Kf9">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="od7-JB-Kf9">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -16,7 +15,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="HomeScreenViewController" customModule="equal_sounds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XU3-vC-GWZ">
@@ -28,10 +27,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o0B-2L-X35">
-                                <rect key="frame" x="0.0" y="88" width="414" height="35"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="35"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kou-2z-exf">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="35"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <state key="normal" title="Select A Configuration">
@@ -42,7 +41,7 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkT-U5-dt7">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="0.0"/>
                                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" systemColor="labelColor"/>
@@ -52,7 +51,7 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9I-Ei-H5Z">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="0.0"/>
                                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" systemColor="labelColor"/>
@@ -84,6 +83,7 @@
                     <navigationItem key="navigationItem" id="Jd5-aV-aV5">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="EQt-9s-JMz">
                             <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="5jR-tg-4Wi">
+                                <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
                         </barButtonItem>
@@ -102,24 +102,24 @@
         <!--Player-->
         <scene sceneID="XHN-Zf-lBf">
             <objects>
-                <viewController id="VVE-Mk-uvc" customClass="songsTableViewController" customModule="equal_sounds" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VVE-Mk-uvc" customClass="SongTableViewController" customModule="equal_sounds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0wx-Fo-Sm8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nuo-Wf-LFn">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="507"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" id="KOc-rz-KLN" customClass="SongTableViewCell" customModule="equal_sounds" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KOc-rz-KLN" id="YgS-8e-Uoi">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="yxI-Vt-LZF">
-                                                    <rect key="frame" x="20" y="0.0" width="89" height="42"/>
+                                                    <rect key="frame" x="20" y="0.0" width="275" height="42"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVw-Ip-vXh">
                                                             <rect key="frame" x="0.0" y="0.0" width="89" height="20.5"/>
@@ -178,16 +178,16 @@
         <!--Now Playing-->
         <scene sceneID="bQk-Lv-eYA">
             <objects>
-                <viewController id="FkA-d9-G9O" customClass="nowPlayingViewController" customModule="equal_sounds" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FkA-d9-G9O" customClass="NowPlayingViewController" customModule="equal_sounds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vek-BN-EWO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xi2-JE-kGc">
                                 <rect key="frame" x="0.0" y="531" width="414" height="133.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bGn-Nx-krO">
-                                        <rect key="frame" x="164" y="0.0" width="86" height="61.5"/>
+                                        <rect key="frame" x="257" y="0.0" width="86" height="61.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UC3-4c-mpA">
                                                 <rect key="frame" x="0.0" y="0.0" width="86" height="20.5"/>
@@ -213,10 +213,10 @@
                                         </subviews>
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="StP-3C-uiK">
-                                        <rect key="frame" x="-2" y="71.5" width="418" height="31"/>
+                                        <rect key="frame" x="89" y="71.5" width="422" height="31"/>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Byb-7r-jTk">
-                                        <rect key="frame" x="103.5" y="111.5" width="207" height="22"/>
+                                        <rect key="frame" x="150" y="111.5" width="300" height="22"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhB-7j-EzV" userLabel="Rewind">
                                                 <rect key="frame" x="0.0" y="0.0" width="31" height="22"/>
@@ -230,7 +230,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5B8-LE-Yz1" userLabel="playpause">
-                                                <rect key="frame" x="86" y="0.0" width="35.5" height="22"/>
+                                                <rect key="frame" x="133" y="0.0" width="34" height="22"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <state key="normal">
                                                     <imageReference key="image" image="playpause.fill" catalog="system" symbolScale="large"/>
@@ -240,7 +240,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax6-dX-ut7" userLabel="Fast Forward">
-                                                <rect key="frame" x="176" y="0.0" width="31" height="22"/>
+                                                <rect key="frame" x="269" y="0.0" width="31" height="22"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <state key="normal">
                                                     <imageReference key="image" image="forward.fill" catalog="system" symbolScale="large"/>
@@ -293,23 +293,23 @@
             <objects>
                 <viewController id="AR3-r6-fqL" customClass="EqualizerViewController" customModule="equal_sounds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UX5-b0-csW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="BAF-wi-ZIT">
-                                <rect key="frame" x="-307.5" y="433" width="656.5" height="31"/>
+                                <rect key="frame" x="-200" y="285" width="460" height="31"/>
                                 <connections>
                                     <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="1Da-Nw-JFe"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="txP-sw-o4j">
-                                <rect key="frame" x="-266" y="433" width="656.5" height="31"/>
+                                <rect key="frame" x="-140" y="285" width="460" height="31"/>
                                 <connections>
                                     <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="G5W-ur-kXw"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="krj-Xe-i3l">
-                                <rect key="frame" x="-225" y="433" width="657" height="31"/>
+                                <rect key="frame" x="-80" y="285" width="460" height="31"/>
                                 <connections>
                                     <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="8RM-Y5-fGs"/>
                                 </connections>
@@ -322,37 +322,37 @@
                                 </connections>
                             </slider>
                             <slider opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="rnj-aA-qW5">
-                                <rect key="frame" x="-142" y="433" width="656.5" height="31"/>
+                                <rect key="frame" x="40" y="285" width="460" height="31"/>
                                 <connections>
                                     <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="Pyy-H6-qBp"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="aIr-RZ-rS4">
-                                <rect key="frame" x="-100.5" y="433" width="656.5" height="31"/>
+                                <rect key="frame" x="100" y="285" width="460" height="31"/>
                                 <connections>
                                     <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="3RA-cd-iCh"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ydo-Wc-nxi">
-                                <rect key="frame" x="-59" y="433" width="656.5" height="31"/>
+                                <rect key="frame" x="160" y="285" width="460" height="31"/>
                                 <connections>
                                     <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="vep-RU-KGK"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="34T-su-hgE">
-                                <rect key="frame" x="-18" y="433" width="657" height="31"/>
+                                <rect key="frame" x="220" y="285" width="460" height="31"/>
                                 <connections>
                                     <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="OjR-bH-erc"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="wSZ-Yz-IfU">
-                                <rect key="frame" x="23.5" y="433" width="656.5" height="31"/>
+                                <rect key="frame" x="280" y="285" width="460" height="31"/>
                                 <connections>
                                     <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="dqJ-FN-UfF"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="vS2-bM-Dcv">
-                                <rect key="frame" x="65" y="433" width="656.5" height="31"/>
+                                <rect key="frame" x="340" y="285" width="460" height="31"/>
                                 <connections>
                                     <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="zNa-gO-w9X"/>
                                 </connections>
@@ -636,7 +636,7 @@
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="music.note" catalog="system" width="97" height="128"/>
         <image name="music.note.list" catalog="system" width="128" height="115"/>
-        <image name="playpause.fill" catalog="system" width="128" height="70"/>
+        <image name="playpause.fill" catalog="system" width="128" height="73"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="speaker.wave.2.fill" catalog="system" width="128" height="90"/>
         <systemColor name="labelColor">
