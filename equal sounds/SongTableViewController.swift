@@ -12,6 +12,7 @@ class SongTableViewController: UIViewController, UITableViewDataSource, UITableV
 	let audioController = (UIApplication.shared.delegate as! AppDelegate).audioController
 	let songFileManager = SongFileManager()
 	@IBOutlet var tableView: UITableView!
+	var currentlyPlayingCell: SongTableViewCell?
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,14 @@ class SongTableViewController: UIViewController, UITableViewDataSource, UITableV
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+	
+	override func viewDidAppear(_ animated: Bool) 
+	{
+		if currentlyPlayingCell?.currentlyPlayingButton.isHidden ?? false
+		{
+			currentlyPlayingCell?.currentlyPlayingButton.isHidden = false
+		}
+	}
 
     // MARK: - Table view data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,7 +56,20 @@ class SongTableViewController: UIViewController, UITableViewDataSource, UITableV
 			{
 				audioController.stopPlayer()
 			}
-			try? audioController.startPlayer(using: songFile)
+			do
+			{
+				try audioController.startPlayer(using: songFile)
+				currentlyPlayingCell?.currentlyPlayingButton.isHidden = true
+				if let cell = tableView.cellForRow(at: indexPath) as? SongTableViewCell
+				{
+					cell.currentlyPlayingButton.isHidden = false
+					tableView.reloadData()
+					currentlyPlayingCell = cell
+				}
+			} catch {
+				print("song table couldnt start player\n\(error)")
+			}
+			
 		}
     }
     

@@ -12,7 +12,9 @@ class SongTableViewCell: UITableViewCell {
     
     @IBOutlet var songNameLabel: UILabel!
     @IBOutlet var artistLabel: UILabel!
-    override func awakeFromNib() {
+	@IBOutlet var currentlyPlayingButton: UIButton!
+	
+	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }

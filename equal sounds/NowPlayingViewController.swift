@@ -9,29 +9,63 @@ import UIKit
 
 class NowPlayingViewController: UIViewController {
     
-    
     let audioController = (UIApplication.shared.delegate as! AppDelegate).audioController
     @IBOutlet var songNameLabel: UILabel!
     @IBOutlet var artistLabel: UILabel!
     @IBOutlet var albumLabel: UILabel!
-    var songOptional: Song? = nil
+	@IBOutlet var albumImageView: UIImageView!
+	@IBOutlet var progressSlider: UISlider!
+	@IBOutlet var currentTimeLabel: UILabel!
+	@IBOutlet var trackDurationLabel: UILabel!
+	var songOptional: Song? = nil
+	var nowPlaying: Song?
     
     
     override func viewDidLoad()
     {
-		try? self.audioController.startPlayer() //demo and testing only
+		//try? self.audioController.startPlayer() //demo and testing only
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
+		
     }
+	 
+	func formatTime(time: TimeInterval) -> String
+	{
+		let minutes: Int = Int(trunc(time / 60))
+		let seconds: Int = Int(time.truncatingRemainder(dividingBy: 60))
+		let paddedSeconds: String = seconds < 10 ? "0\(seconds)" : "\(seconds)"
+		return "\(minutes):\(paddedSeconds)"
+	}
+	
+	override func viewWillAppear(_ animated: Bool) 
+	{
+		guard let nowPlayingSong = audioController.getNowPlayingMetadata() else {return}
+		nowPlaying = nowPlayingSong
+		songNameLabel.text = nowPlayingSong.name
+		artistLabel.text = nowPlayingSong.artist ?? "Unknown Artist"
+		albumLabel.text = nowPlayingSong.albumName ?? "Unknown Album"
+		albumImageView.image = nowPlayingSong.albumImage
+		progressSlider.maximumValue = Float(nowPlayingSong.duration)
+		progressSlider.value = Float(audioController.currentPlayTime)
+		progressSlider.minimumValue = 0
+		currentTimeLabel.text = formatTime(time: audioController.currentPlayTime)
+		trackDurationLabel.text = formatTime(time: TimeInterval(nowPlayingSong.duration))
+		audioController.subscribeToTimer 
+		{
+			self.progressSlider.value = Float(self.audioController.currentPlayTime)
+			self.currentTimeLabel.text = self.formatTime(time: self.audioController.currentPlayTime)
+		}
+	}
+	
+	override func viewWillDisappear(_ animated: Bool) 
+	{
+		audioController.unsubscribeFromTimer()
+	}
     
     @IBAction func playpause(_ sender: UIButton)
     {
         // playpause
-        async
-        {
-            self.audioController.playPausePlayer()
-        }
+		self.audioController.playPausePlayer()
     }
     
     @IBAction func fastForwardButton(_ sender: Any)

@@ -16,7 +16,9 @@ class AudioController
     let equalizer: Equalizer
 	var headphonesConnected: Bool = false
 	var isPrepared: Bool = false
+	
 	var isPlaying: Bool { player.isPlaying }
+	var currentPlayTime: TimeInterval { player.currentPlayTime }
     
     init()
     {
@@ -30,6 +32,16 @@ class AudioController
 		headphonesConnected = hasHeadphones(in: AVAudioSession.sharedInstance().currentRoute)
 		setupNotifications()
     }
+	
+	func subscribeToTimer(closure: @escaping ()->())
+	{
+		player.subscribeToTimer(closure: closure)
+	}
+	
+	func unsubscribeFromTimer()
+	{
+		player.unsubscribeFromTimer()
+	}
 	
 	//MARK:- Player Management
 	
@@ -173,9 +185,10 @@ class AudioController
 		self.equalizer.exportCurrentConfiguration(as: name)
 	}
 	
-	func getNowPlayingMetadata()
+	func getNowPlayingMetadata() -> Song?
 	{
-		print("Hi! I am a stub and need to be completed [getNowPlayingMetadata()]")
+		guard let nowPlaying = player.nowPlaying else {return nil}
+		return SongFileManager().fetchSongMetadata(for: nowPlaying.url)
 	}
 	
 	//MARK:- System Event Handling

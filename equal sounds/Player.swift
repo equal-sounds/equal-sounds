@@ -20,11 +20,13 @@ class Player: AVAudioPlayerNode
 			self.isPlayable = audioFile != nil
 		}
 	}
+	var nowPlaying: AVAudioFile? { audioFile }
 	var format: AVAudioFormat?
 	var duration: TimeInterval
 	var currentPlayTime: TimeInterval
 	var canBeResumed: Bool
 	var isPlayable: Bool
+	var activeSubscription: (()->())?
 	
 	//MARK:- Player Internal
 	
@@ -36,6 +38,7 @@ class Player: AVAudioPlayerNode
 		audioFile = nil
 		canBeResumed = false
 		isPlayable = false
+		activeSubscription = nil
 		super.init()
 	}
 	
@@ -47,6 +50,10 @@ class Player: AVAudioPlayerNode
 			timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true)
 			{ _ in
 				self.currentPlayTime += 1.0
+				if let subscriptionClosure = self.activeSubscription
+				{
+					subscriptionClosure()
+				}
 			}
 		}
 	}
@@ -58,6 +65,23 @@ class Player: AVAudioPlayerNode
 			timer?.invalidate()
 			timer = nil
 		}
+	}
+	
+	func subscribeToTimer(closure: @escaping ()->())
+	{
+		activeSubscription = closure
+		stopTimer()
+		timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true)
+		{ _ in
+			self.currentPlayTime += 1.0
+			closure()
+		}
+	}
+	
+	func unsubscribeFromTimer()
+	{
+		stopTimer()
+		startTimer()
 	}
 	
 	//available externally but low usage expected, primarily intended for internal use
