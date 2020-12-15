@@ -184,7 +184,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xi2-JE-kGc">
-                                <rect key="frame" x="0.0" y="269" width="600" height="133.5"/>
+                                <rect key="frame" x="0.0" y="531" width="414" height="133.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bGn-Nx-krO">
                                         <rect key="frame" x="257" y="0.0" width="86" height="61.5"/>
@@ -258,7 +258,7 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LBb-4Q-04w">
-                                <rect key="frame" x="4" y="48" width="592" height="106"/>
+                                <rect key="frame" x="4" y="92" width="406" height="324"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O8R-BY-rD5"/>
