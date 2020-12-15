@@ -316,6 +316,7 @@
                             </slider>
                             <slider opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="aN8-db-cNj">
                                 <rect key="frame" x="-183.5" y="433" width="656.5" height="31"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
                                 <connections>
                                     <action selector="eqSliderValueChanged:" destination="AR3-r6-fqL" eventType="valueChanged" id="xN7-jM-Jm8"/>
                                 </connections>
@@ -363,70 +364,70 @@
                                         <rect key="frame" x="0.0" y="0.0" width="36" height="36.5"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" systemColor="linkColor"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="62Hz" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WR-up-lFr">
                                         <rect key="frame" x="42" y="0.0" width="36" height="36.5"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" systemColor="linkColor"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="125Hz" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yza-4b-MRn">
                                         <rect key="frame" x="84" y="0.0" width="36" height="36.5"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" systemColor="linkColor"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="250Hz" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40R-za-4Hr">
                                         <rect key="frame" x="126" y="0.0" width="36" height="36.5"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" systemColor="linkColor"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500Hz" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yW0-vQ-axf">
                                         <rect key="frame" x="168" y="0.0" width="36" height="36.5"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" systemColor="linkColor"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1KHz" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cih-Pm-qML">
                                         <rect key="frame" x="210" y="0.0" width="36" height="36.5"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" systemColor="linkColor"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2KHz" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSn-6g-NS0">
                                         <rect key="frame" x="252" y="0.0" width="36" height="36.5"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" systemColor="linkColor"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4KHz" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tio-Qc-0p4">
                                         <rect key="frame" x="294" y="0.0" width="36" height="36.5"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" systemColor="linkColor"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8KHz" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrA-Au-pUI">
                                         <rect key="frame" x="336" y="0.0" width="36" height="36.5"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" systemColor="linkColor"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16KHz" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3o-LV-rGD">
                                         <rect key="frame" x="378" y="0.0" width="36" height="36.5"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" systemColor="linkColor"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -437,61 +438,61 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyB-iY-eBz">
                                         <rect key="frame" x="0.0" y="0.0" width="41.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" systemColor="linkColor"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
                                         <color key="highlightedColor" systemColor="linkColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSm-Ja-emk">
                                         <rect key="frame" x="41.5" y="0.0" width="41.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" systemColor="linkColor"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
                                         <color key="highlightedColor" systemColor="linkColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PW-3p-caP">
                                         <rect key="frame" x="83" y="0.0" width="41" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" systemColor="linkColor"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
                                         <color key="highlightedColor" systemColor="linkColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9A-8Z-NeG">
                                         <rect key="frame" x="124" y="0.0" width="41.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" systemColor="linkColor"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
                                         <color key="highlightedColor" systemColor="linkColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76i-Tz-UXC">
                                         <rect key="frame" x="165.5" y="0.0" width="41.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" systemColor="linkColor"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
                                         <color key="highlightedColor" systemColor="linkColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMi-pQ-pfO">
                                         <rect key="frame" x="207" y="0.0" width="41.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" systemColor="linkColor"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
                                         <color key="highlightedColor" systemColor="linkColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="7" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewq-17-6ym">
                                         <rect key="frame" x="248.5" y="0.0" width="41.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" systemColor="linkColor"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
                                         <color key="highlightedColor" systemColor="linkColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="7" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ba-5w-eB7">
                                         <rect key="frame" x="290" y="0.0" width="41" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" systemColor="linkColor"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
                                         <color key="highlightedColor" systemColor="linkColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="9" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6al-Am-5ua">
                                         <rect key="frame" x="331" y="0.0" width="41.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" systemColor="linkColor"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
                                         <color key="highlightedColor" systemColor="linkColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="9" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQt-NH-a20">
                                         <rect key="frame" x="372.5" y="0.0" width="41.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" systemColor="linkColor"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
                                         <color key="highlightedColor" systemColor="linkColor"/>
                                     </label>
                                 </subviews>
@@ -544,14 +545,44 @@
                     <connections>
                         <outlet property="OneTwentyFiveHZSlider" destination="krj-Xe-i3l" id="107-br-72C"/>
                         <outlet property="eightKHZSlider" destination="wSZ-Yz-IfU" id="X7a-zh-1gT"/>
+                        <outlet property="eightKHzLabel" destination="rrA-Au-pUI" id="kac-dT-HnM"/>
+                        <outlet property="eightKHzLevelLabel" destination="6al-Am-5ua" id="DSt-XF-rr1"/>
                         <outlet property="fiveHundredHZSlider" destination="rnj-aA-qW5" id="AUt-yQ-5Fz"/>
+                        <outlet property="fiveHundredHzLabel" destination="yW0-vQ-axf" id="xWj-UJ-lgb"/>
+                        <outlet property="fiveHundredHzLevelLabel" destination="76i-Tz-UXC" id="whK-Ed-dbA"/>
                         <outlet property="fourKHZSlider" destination="34T-su-hgE" id="JPs-7X-Nlh"/>
+                        <outlet property="fourKHzLabel" destination="tio-Qc-0p4" id="e1o-Ez-ED6"/>
+                        <outlet property="fourKHzLevelLabel" destination="6ba-5w-eB7" id="EJ9-PF-iqd"/>
                         <outlet property="oneKHZSlider" destination="aIr-RZ-rS4" id="Vlh-E1-PWH"/>
+                        <outlet property="oneKHzLabel" destination="cih-Pm-qML" id="SWu-8k-5LZ"/>
+                        <outlet property="oneKHzLevelLabel" destination="cMi-pQ-pfO" id="0g0-6z-dar"/>
+                        <outlet property="oneTwentyFiveHzLabel" destination="Yza-4b-MRn" id="71c-JA-kbb"/>
+                        <outlet property="oneTwentyFiveHzLevelLabel" destination="4PW-3p-caP" id="T6S-rV-Agb"/>
                         <outlet property="sixteenKHZSlider" destination="vS2-bM-Dcv" id="DdD-tB-W0Q"/>
+                        <outlet property="sixteenKHzLabel" destination="X3o-LV-rGD" id="cjN-bY-Mo5"/>
+                        <outlet property="sixteenKHzLevelLabel" destination="sQt-NH-a20" id="Q5X-gW-yXN"/>
                         <outlet property="sixtyTwoHZSlider" destination="txP-sw-o4j" id="Pl5-Ug-12k"/>
+                        <outlet property="sixtyTwoHzLabel" destination="4WR-up-lFr" id="sOm-Ab-oFi"/>
+                        <outlet property="sixtyTwoHzLevelLabel" destination="VSm-Ja-emk" id="7fg-JM-vjT"/>
                         <outlet property="thirtyOneHZSlider" destination="BAF-wi-ZIT" id="rFv-sy-2FI"/>
+                        <outlet property="thirtyOneHzLabel" destination="x5r-ky-l3D" id="rfk-Ib-Nxm"/>
+                        <outlet property="thirtyOneHzLevelLabel" destination="qyB-iY-eBz" id="E31-g1-B6Y"/>
+                        <outlet property="twoFifityHzLabel" destination="40R-za-4Hr" id="gLF-d8-ZvK"/>
                         <outlet property="twoFiftyHZSlider" destination="aN8-db-cNj" id="QEM-mO-Zxr"/>
+                        <outlet property="twoFiftyHzLevelLabel" destination="M9A-8Z-NeG" id="XGM-7B-GjD"/>
                         <outlet property="twoKHZSlider" destination="Ydo-Wc-nxi" id="oYX-Ej-byE"/>
+                        <outlet property="twoKHzLabel" destination="BSn-6g-NS0" id="xaF-fF-Iai"/>
+                        <outlet property="twoKHzLevelLabel" destination="ewq-17-6ym" id="SRB-uz-fdg"/>
+                        <outletCollection property="frequencyLevelLabelArray" destination="qyB-iY-eBz" collectionClass="NSMutableArray" id="Ri6-HO-JBc"/>
+                        <outletCollection property="frequencyLevelLabelArray" destination="VSm-Ja-emk" collectionClass="NSMutableArray" id="dgX-aL-BQU"/>
+                        <outletCollection property="frequencyLevelLabelArray" destination="4PW-3p-caP" collectionClass="NSMutableArray" id="31q-8P-den"/>
+                        <outletCollection property="frequencyLevelLabelArray" destination="M9A-8Z-NeG" collectionClass="NSMutableArray" id="Xwv-e7-U2U"/>
+                        <outletCollection property="frequencyLevelLabelArray" destination="76i-Tz-UXC" collectionClass="NSMutableArray" id="2fW-ur-Ruu"/>
+                        <outletCollection property="frequencyLevelLabelArray" destination="cMi-pQ-pfO" collectionClass="NSMutableArray" id="cC4-dw-XJu"/>
+                        <outletCollection property="frequencyLevelLabelArray" destination="ewq-17-6ym" collectionClass="NSMutableArray" id="HBY-a4-daP"/>
+                        <outletCollection property="frequencyLevelLabelArray" destination="6ba-5w-eB7" collectionClass="NSMutableArray" id="1XH-dn-WUY"/>
+                        <outletCollection property="frequencyLevelLabelArray" destination="6al-Am-5ua" collectionClass="NSMutableArray" id="amt-7F-dVp"/>
+                        <outletCollection property="frequencyLevelLabelArray" destination="sQt-NH-a20" collectionClass="NSMutableArray" id="ahA-KI-odL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZU-lL-9Ft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

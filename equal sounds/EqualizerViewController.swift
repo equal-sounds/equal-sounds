@@ -13,6 +13,32 @@ class EqualizerViewController: UIViewController
 	static let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 	var context: NSManagedObjectContext { EqualizerViewController.context }
 	//display eq config name somewhere on screen
+    // MARK: - Frequency Level Label Array
+    @IBOutlet var frequencyLevelLabelArray: [UILabel]!
+    
+    // MARK: - Frequency labels
+    @IBOutlet var thirtyOneHzLabel: UILabel!
+    @IBOutlet var sixtyTwoHzLabel: UILabel!
+    @IBOutlet var oneTwentyFiveHzLabel: UILabel!
+    @IBOutlet var twoFifityHzLabel: UILabel!
+    @IBOutlet var fiveHundredHzLabel: UILabel!
+    @IBOutlet var oneKHzLabel: UILabel!
+    @IBOutlet var twoKHzLabel: UILabel!
+    @IBOutlet var fourKHzLabel: UILabel!
+    @IBOutlet var eightKHzLabel: UILabel!
+    @IBOutlet var sixteenKHzLabel: UILabel!
+    // MARK: - Frequency level labels
+    @IBOutlet var thirtyOneHzLevelLabel: UILabel!
+    @IBOutlet var sixtyTwoHzLevelLabel: UILabel!
+    @IBOutlet var oneTwentyFiveHzLevelLabel: UILabel!
+    @IBOutlet var twoFiftyHzLevelLabel: UILabel!
+    @IBOutlet var fiveHundredHzLevelLabel: UILabel!
+    @IBOutlet var oneKHzLevelLabel: UILabel!
+    @IBOutlet var twoKHzLevelLabel: UILabel!
+    @IBOutlet var fourKHzLevelLabel: UILabel!
+    @IBOutlet var eightKHzLevelLabel: UILabel!
+    @IBOutlet var sixteenKHzLevelLabel: UILabel!
+    // MARK: -Frequency Sliders
     @IBOutlet var thirtyOneHZSlider: UISlider!
     @IBOutlet var sixtyTwoHZSlider: UISlider!
     @IBOutlet var OneTwentyFiveHZSlider: UISlider!
@@ -33,15 +59,25 @@ class EqualizerViewController: UIViewController
         super.viewDidLoad()
         //rotating all the sliders to be vertical
         thirtyOneHZSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
+        thirtyOneHZSlider.tintColor = UIColor.green
         sixtyTwoHZSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
+        sixtyTwoHZSlider.tintColor = UIColor.green
         OneTwentyFiveHZSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
+        OneTwentyFiveHZSlider.tintColor = UIColor.green
         twoFiftyHZSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
+        twoFiftyHZSlider.tintColor = UIColor.green
         fiveHundredHZSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
+        fiveHundredHZSlider.tintColor = UIColor.green
         oneKHZSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
+        oneKHZSlider.tintColor = UIColor.green
         twoKHZSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
+        twoKHZSlider.tintColor = UIColor.green
         fourKHZSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
+        fourKHZSlider.tintColor = UIColor.green
         eightKHZSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
+        eightKHZSlider.tintColor = UIColor.green
         sixteenKHZSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
+        sixteenKHZSlider.tintColor = UIColor.green
 		savedConfigurations = []
         // Do any additional setup after loading the view.
 		loadSavedConfigurations()
@@ -65,10 +101,14 @@ class EqualizerViewController: UIViewController
 	{
 		let tag = sender.tag
 		let val = sender.value
+        
+        
 		async
 		{
 			self.audioController.adjustEqualizer(at: tag, to: val)
 		}
+        frequencyLevelLabelArray[tag].text = "\(String(format: "%.1f",val))"
+        
 	}
 	
 	
