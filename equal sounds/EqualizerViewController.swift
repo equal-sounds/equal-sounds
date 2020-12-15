@@ -87,15 +87,6 @@ class EqualizerViewController: UIViewController
 			try? self.audioController.startPlayer(using: FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("song").appendingPathExtension("mp3"))
         }
     }
-    
-    override func viewDidDisappear(_ animated: Bool)
-    {
-		//for demo and testing purposes
-        async
-        {
-            self.audioController.stopPlayer()
-        }
-    }
 	
 	@IBAction func eqSliderValueChanged(_ sender: UISlider)
 	{

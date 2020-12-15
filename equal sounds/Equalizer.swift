@@ -69,8 +69,8 @@ class Equalizer: AVAudioUnitEQ
 	
 	func exportCurrentConfiguration(as name: String) -> (EqualizerSavedConfiguration, [FrequencySetting])
 	{
+		self.currentConfiguration = EqualizerConfiguration(named: name, with: self.bands.map { $0.gain })
 		let exportedConfiguration = EqualizerConfiguration.exportForSave(using: self.currentConfiguration, as: name)
-		self.currentConfiguration = EqualizerConfiguration(from: self.currentConfiguration, as: name)
 		return exportedConfiguration
 	}
 }

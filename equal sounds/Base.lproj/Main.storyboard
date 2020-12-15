@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pua-DC-FdL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pua-DC-FdL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -230,7 +230,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5B8-LE-Yz1" userLabel="playpause">
-                                                <rect key="frame" x="86" y="0.0" width="35.5" height="22"/>
+                                                <rect key="frame" x="86.5" y="0.0" width="34" height="22"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <state key="normal">
                                                     <imageReference key="image" image="playpause.fill" catalog="system" symbolScale="large"/>
@@ -706,7 +706,7 @@
             <objects>
                 <viewController id="PLg-yz-2z7" customClass="ConfigurationTableViewController" customModule="equal_sounds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iwy-p4-2ja">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jSP-fM-PqP">
@@ -750,12 +750,8 @@
                             <constraint firstItem="kib-cX-gOH" firstAttribute="trailing" secondItem="jSP-fM-PqP" secondAttribute="trailing" id="shy-9D-cfD"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <segue destination="dJI-GJ-LOg" kind="unwind" identifier="SelectSegue" unwindAction="unwindToEqualizerViewControllerWithSegue:" id="qUA-Ej-3eV"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="09M-q8-xwQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="dJI-GJ-LOg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1545" y="2743"/>
         </scene>
@@ -764,7 +760,7 @@
             <objects>
                 <viewController id="b4s-bO-Ln7" customClass="AddConfigurationViewController" customModule="equal_sounds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qcz-0G-jxD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="eqt-iG-yDz">
@@ -799,11 +795,9 @@
                     </view>
                     <connections>
                         <outlet property="addConfigurationNameTextField" destination="WjQ-dq-lhQ" id="mLN-3d-IEN"/>
-                        <segue destination="EdT-6t-yuJ" kind="unwind" identifier="AddSegue" unwindAction="unwindToEqualizerViewControllerWithSegue:" id="HrE-va-EO9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wSc-Gi-BhK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="EdT-6t-yuJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2622" y="1930"/>
         </scene>
@@ -815,7 +809,7 @@
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="music.note" catalog="system" width="97" height="128"/>
         <image name="music.note.list" catalog="system" width="128" height="115"/>
-        <image name="playpause.fill" catalog="system" width="128" height="70"/>
+        <image name="playpause.fill" catalog="system" width="128" height="73"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="speaker.wave.2.fill" catalog="system" width="128" height="90"/>
         <namedColor name="AccentColor">

@@ -14,7 +14,6 @@ class ConfigurationTableViewController: UIViewController, UITableViewDataSource,
     static let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var context: NSManagedObjectContext { ConfigurationTableViewController.context }
     let audioController = AudioController()
-    var configurationOptional: EqualizerConfiguration? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +49,7 @@ class ConfigurationTableViewController: UIViewController, UITableViewDataSource,
         async {
             self.audioController.changeEqualizerConfiguration(to: self.savedConfigurations[indexPath.row])
         }
-        performSegue(withIdentifier: "SelectSegue", sender: self)
+        dismiss(animated: true, completion: nil)
     }
     
     
@@ -104,15 +103,6 @@ class ConfigurationTableViewController: UIViewController, UITableViewDataSource,
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-    }
     */
-    @IBAction func unwindToEqualizerViewController(segue: UIStoryboardSegue) {
-
-    }
-    /*
-    override func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
-        <#code#>
-    }
- */
 
 }

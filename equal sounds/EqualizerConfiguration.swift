@@ -5,10 +5,13 @@
 //  Created by Gray, John Walker on 12/12/20.
 //
 
-import Foundation
+import UIKit
+import CoreData
 
 struct EqualizerConfiguration
 {
+	static let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+	var context: NSManagedObjectContext { EqualizerViewController.context }
 	//immutable - when settings on saved config is modified, a new object is made immediatly to allow the UI to update to "Unsaved", but no new configuration objects are made after that until a request to save
 	let name: String
 	let frequencies: [EqualizerBand:Float]
@@ -129,12 +132,14 @@ struct EqualizerConfiguration
 	
 	static func exportForSave(using configuration: EqualizerConfiguration, as name: String) -> (EqualizerSavedConfiguration, [FrequencySetting])
 	{
-		let equalizerSavedConfiguration = EqualizerSavedConfiguration()
+		var entity = NSEntityDescription.entity(forEntityName: "EqualizerSavedConfiguration", in: context)!
+		let equalizerSavedConfiguration = EqualizerSavedConfiguration(entity: entity, insertInto: context)
 		var frequencySettings: [FrequencySetting] = []
 		equalizerSavedConfiguration.name = name
 		for (band,gain) in configuration.frequencies
 		{
-			let frequencySetting = FrequencySetting()
+			entity = NSEntityDescription.entity(forEntityName: "FrequencySetting", in: context)!
+			let frequencySetting = FrequencySetting(entity: entity, insertInto: context)
 			//frequencySetting.configuration = equalizerSavedConfiguration   //this seems like it wont be needed, will see when tested
 			frequencySetting.frequency = band.rawValue
 			frequencySetting.gain = gain

@@ -45,14 +45,9 @@ class AddConfigurationViewController: UIViewController {
         print("Should perform")
         if addConfigurationNameTextField.text != nil && addConfigurationNameTextField.text != ""{
             saveEqConfiguration(as: addConfigurationNameTextField.text!)
-            performSegue(withIdentifier: "AddSegue", sender: self)
+			dismiss(animated: true, completion: nil)
         }
     }
-    
-    @IBAction func unwindToEqualizerViewController(segue: UIStoryboardSegue)
-    {
-    }
-    
 
     /*
     // MARK: - Navigation
