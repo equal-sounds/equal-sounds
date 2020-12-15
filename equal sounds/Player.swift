@@ -113,6 +113,12 @@ class Player: AVAudioPlayerNode
 	
 	//MARK:- Player Controls
 	
+	func prepare()
+	{
+		guard audioFile != nil else {return}
+		self.scheduleFile(audioFile!, at: nil, completionHandler: nil)
+	}
+	
 	override func play()
 	{
 	    play(at: nil)
@@ -133,9 +139,12 @@ class Player: AVAudioPlayerNode
 	
 	func play(file: AVAudioFile, at when: AVAudioTime?)
 	{
-		stop()
+		if isPlaying
+		{
+			stop()
+		}
 		audioFile = file
-		self.scheduleFile(audioFile!, at: nil, completionHandler: nil)
+		prepare()
 		play(at: when)
 	}
 	
@@ -155,8 +164,11 @@ class Player: AVAudioPlayerNode
 	
 	override func pause()
 	{
-		super.pause()
-		stopTimer()
+		if isPlaying
+		{
+			super.pause()
+			stopTimer()
+		}
 	}
 	
 	override func stop()
@@ -172,9 +184,14 @@ class Player: AVAudioPlayerNode
 	{
 		if canBeResumed
 		{
-			pause()
+			if isPlaying
+			{
+				pause()
+				self.reset()
+				canBeResumed = false
+			}
 			currentPlayTime = (currentPlayTime + 10 > duration) ? duration : (currentPlayTime + 10)
-			resume(at: AVAudioTime(hostTime: AVAudioTime.hostTime(forSeconds: currentPlayTime)))
+			play(at: AVAudioTime(hostTime: AVAudioTime.hostTime(forSeconds: currentPlayTime)))
 		} else if isPlayable {
 			currentPlayTime = 10
 			play(at: AVAudioTime(hostTime: AVAudioTime.hostTime(forSeconds: currentPlayTime)))
@@ -185,9 +202,14 @@ class Player: AVAudioPlayerNode
 	{
 		if canBeResumed
 		{
-			pause()
+			if isPlaying
+			{
+				pause()
+				self.reset()
+				canBeResumed = false
+			}
 			currentPlayTime = (currentPlayTime - 10 < 0) ? 0 : (currentPlayTime - 10)
-			resume(at: AVAudioTime(hostTime: AVAudioTime.hostTime(forSeconds: currentPlayTime)))
+			play(at: AVAudioTime(hostTime: AVAudioTime.hostTime(forSeconds: currentPlayTime)))
 		} else if isPlayable {
 			play()
 		}
