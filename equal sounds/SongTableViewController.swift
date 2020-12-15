@@ -1,5 +1,5 @@
 //
-//  songsTableViewController.swift
+//  SongTableViewController.swift
 //  equal sounds
 //
 //  Created by Brandon Clark on 12/12/20.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class songsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SongTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var songs = [Song]()
 
     override func viewDidLoad() {
