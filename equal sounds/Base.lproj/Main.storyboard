@@ -11,95 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home Screen View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeScreenViewController" customModule="equal_sounds" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XU3-vC-GWZ">
-                                <rect key="frame" x="156" y="415" width="103" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="show equalizer"/>
-                                <connections>
-                                    <action selector="showEQ:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2vr-F5-5CT"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o0B-2L-X35">
-                                <rect key="frame" x="0.0" y="88" width="414" height="35"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kou-2z-exf">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <state key="normal" title="Select A Configuration">
-                                            <color key="titleColor" systemColor="labelColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="selctConfiguration:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OZM-gP-XdU"/>
-                                        </connections>
-                                    </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkT-U5-dt7">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
-                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleColor" systemColor="labelColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="configurationSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="imR-MX-Fqy"/>
-                                        </connections>
-                                    </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9I-Ei-H5Z">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
-                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleColor" systemColor="labelColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="configurationSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2XZ-0N-Vka"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="qkT-U5-dt7" firstAttribute="leading" secondItem="o0B-2L-X35" secondAttribute="leading" id="Afc-tl-kL6"/>
-                                    <constraint firstAttribute="trailing" secondItem="L9I-Ei-H5Z" secondAttribute="trailing" id="LpZ-MY-78A"/>
-                                    <constraint firstAttribute="trailing" secondItem="qkT-U5-dt7" secondAttribute="trailing" id="NWi-hP-VEw"/>
-                                    <constraint firstAttribute="trailing" secondItem="kou-2z-exf" secondAttribute="trailing" id="OT9-oL-zds"/>
-                                    <constraint firstItem="L9I-Ei-H5Z" firstAttribute="leading" secondItem="o0B-2L-X35" secondAttribute="leading" id="PjX-CP-Q1W"/>
-                                    <constraint firstItem="kou-2z-exf" firstAttribute="leading" secondItem="o0B-2L-X35" secondAttribute="leading" id="vOd-AH-8X3"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="labelColor"/>
-                        <constraints>
-                            <constraint firstItem="o0B-2L-X35" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5sz-RL-9Hq"/>
-                            <constraint firstItem="o0B-2L-X35" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6MF-Hw-cjo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o0B-2L-X35" secondAttribute="trailing" id="No1-Sh-zXU"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="Jd5-aV-aV5">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="EQt-9s-JMz">
-                            <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="5jR-tg-4Wi">
-                                <rect key="frame" x="20" y="6.5" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="1nh-ZV-wn0">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outletCollection property="configurations" destination="qkT-U5-dt7" collectionClass="NSMutableArray" id="Vzd-Wc-S4n"/>
-                        <outletCollection property="configurations" destination="L9I-Ei-H5Z" collectionClass="NSMutableArray" id="i47-j3-h5P"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1381" y="1930"/>
-        </scene>
         <!--Song Table View Controller-->
         <scene sceneID="XHN-Zf-lBf">
             <objects>
@@ -664,7 +575,6 @@
                         <color key="selectedImageTintColor" name="AccentColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Nlu-6g-49K" kind="relationship" relationship="viewControllers" id="ljT-ZU-r3U"/>
                         <segue destination="4OF-Co-GCK" kind="relationship" relationship="viewControllers" id="bTM-dT-baD"/>
                         <segue destination="WHj-ef-ktY" kind="relationship" relationship="viewControllers" id="z1D-jI-L43"/>
                         <segue destination="H9B-cT-bqW" kind="relationship" relationship="viewControllers" id="ijJ-yA-8JH"/>
@@ -672,7 +582,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDJ-Qe-4Vd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="251" y="88"/>
+            <point key="canvasLocation" x="609" y="176"/>
         </scene>
         <!--Equalizer-->
         <scene sceneID="P3c-Ik-vLN">
@@ -692,25 +602,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9y-o4-XWW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1545" y="1033"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="eUk-j8-lOy">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nlu-6g-49K" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" selectedImage="house.fill" id="nHN-ah-mtv"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fR3-gj-9lI">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="E1V-aV-uow"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eIy-V1-IBT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1380" y="1033"/>
         </scene>
         <!--Player-->
         <scene sceneID="Ugi-Ps-tcI">
@@ -858,7 +749,6 @@
         <image name="arrow.up.right.square" catalog="system" width="128" height="114"/>
         <image name="backward.fill" catalog="system" width="128" height="79"/>
         <image name="forward.fill" catalog="system" width="128" height="79"/>
-        <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="music.note" catalog="system" width="97" height="128"/>
         <image name="music.note.list" catalog="system" width="128" height="115"/>
@@ -873,9 +763,6 @@
         </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

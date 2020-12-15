@@ -22,7 +22,6 @@
 		36D164AC2577BF5C0048D59E /* EqualizerBand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D164AB2577BF5C0048D59E /* EqualizerBand.swift */; };
 		36D164B12577D8CF0048D59E /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 36D164B02577D8CE0048D59E /* song.mp3 */; };
 		36D164B52577DB7E0048D59E /* EqualizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D164B42577DB7E0048D59E /* EqualizerViewController.swift */; };
-		36D164B92577DBB70048D59E /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D164B82577DBB70048D59E /* HomeScreenViewController.swift */; };
 		90213107256A190A007FDF56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90213106256A190A007FDF56 /* AppDelegate.swift */; };
 		90213109256A190A007FDF56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90213108256A190A007FDF56 /* SceneDelegate.swift */; };
 		9021310E256A190A007FDF56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9021310C256A190A007FDF56 /* Main.storyboard */; };
@@ -53,7 +52,6 @@
 		36D164AB2577BF5C0048D59E /* EqualizerBand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualizerBand.swift; sourceTree = "<group>"; };
 		36D164B02577D8CE0048D59E /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
 		36D164B42577DB7E0048D59E /* EqualizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualizerViewController.swift; sourceTree = "<group>"; };
-		36D164B82577DBB70048D59E /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		90213103256A190A007FDF56 /* equal sounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "equal sounds.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90213106256A190A007FDF56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90213108256A190A007FDF56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 				905594BC2588972B00040189 /* AddConfigurationViewController.swift */,
 				905594BF25889A2400040189 /* ConfigurationTableViewController.swift */,
 				905594C325889B8300040189 /* ConfigurationTableViewCell.swift */,
-				36D164B82577DBB70048D59E /* HomeScreenViewController.swift */,
 				36D164B42577DB7E0048D59E /* EqualizerViewController.swift */,
 				36D164972577BA430048D59E /* AudioController.swift */,
 				36D164962577BA430048D59E /* Thread+Async.swift */,
@@ -225,7 +222,6 @@
 				36B336C425859E080089E293 /* Equalizer.swift in Sources */,
 				90213109256A190A007FDF56 /* SceneDelegate.swift in Sources */,
 				36A3FC9925861DBE0059BEA7 /* FrequencySetting+CoreDataProperties.swift in Sources */,
-				36D164B92577DBB70048D59E /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
