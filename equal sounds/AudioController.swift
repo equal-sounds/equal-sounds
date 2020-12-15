@@ -128,7 +128,7 @@ class AudioController
 		player.rewind()
 	}
     
-	//MARK:- Equalizer Management
+	//MARK: -Equalizer Management
 	
     // call in background
     func adjustEqualizer(atFrequency band: EqualizerBand, to gain: Float)

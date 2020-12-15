@@ -26,6 +26,9 @@
 		90213110256A190C007FDF56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9021310F256A190C007FDF56 /* Assets.xcassets */; };
 		90213113256A190C007FDF56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90213111256A190C007FDF56 /* LaunchScreen.storyboard */; };
 		90213122256A1B6C007FDF56 /* Equal-Sounds.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90213120256A1B6C007FDF56 /* Equal-Sounds.xcdatamodeld */; };
+		905594BD2588972B00040189 /* AddConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905594BC2588972B00040189 /* AddConfigurationViewController.swift */; };
+		905594C025889A2400040189 /* ConfigurationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905594BF25889A2400040189 /* ConfigurationTableViewController.swift */; };
+		905594C425889B8300040189 /* ConfigurationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905594C325889B8300040189 /* ConfigurationTableViewCell.swift */; };
 		90F1FE2D2585ABFB002BCFB2 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F1FE2C2585ABFB002BCFB2 /* Song.swift */; };
 		90F1FE302585ACAE002BCFB2 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F1FE2F2585ACAE002BCFB2 /* NowPlayingViewController.swift */; };
 		90F1FE332585B6AB002BCFB2 /* SongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F1FE322585B6AB002BCFB2 /* SongTableViewController.swift */; };
@@ -54,6 +57,9 @@
 		90213112256A190C007FDF56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90213114256A190C007FDF56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90213121256A1B6C007FDF56 /* Equal-Sounds.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Equal-Sounds.xcdatamodel"; sourceTree = "<group>"; };
+		905594BC2588972B00040189 /* AddConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConfigurationViewController.swift; sourceTree = "<group>"; };
+		905594BF25889A2400040189 /* ConfigurationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationTableViewController.swift; sourceTree = "<group>"; };
+		905594C325889B8300040189 /* ConfigurationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationTableViewCell.swift; sourceTree = "<group>"; };
 		90F1FE2C2585ABFB002BCFB2 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		90F1FE2F2585ACAE002BCFB2 /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
 		90F1FE322585B6AB002BCFB2 /* SongTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +101,9 @@
 		90213105256A190A007FDF56 /* equal sounds */ = {
 			isa = PBXGroup;
 			children = (
+				905594BC2588972B00040189 /* AddConfigurationViewController.swift */,
+				905594BF25889A2400040189 /* ConfigurationTableViewController.swift */,
+				905594C325889B8300040189 /* ConfigurationTableViewCell.swift */,
 				36D164B82577DBB70048D59E /* HomeScreenViewController.swift */,
 				36D164B42577DB7E0048D59E /* EqualizerViewController.swift */,
 				36D164972577BA430048D59E /* AudioController.swift */,
@@ -191,12 +200,15 @@
 			files = (
 				36A3FC702585F1620059BEA7 /* EqualizerConfiguration.swift in Sources */,
 				36A3FC9825861DBE0059BEA7 /* FrequencySetting+CoreDataClass.swift in Sources */,
+				905594C425889B8300040189 /* ConfigurationTableViewCell.swift in Sources */,
 				90F1FE302585ACAE002BCFB2 /* NowPlayingViewController.swift in Sources */,
 				36D164B52577DB7E0048D59E /* EqualizerViewController.swift in Sources */,
 				90213107256A190A007FDF56 /* AppDelegate.swift in Sources */,
 				36B336C82585B5AA0089E293 /* Player.swift in Sources */,
 				36D164AC2577BF5C0048D59E /* EqualizerBand.swift in Sources */,
+				905594BD2588972B00040189 /* AddConfigurationViewController.swift in Sources */,
 				90F1FE2D2585ABFB002BCFB2 /* Song.swift in Sources */,
+				905594C025889A2400040189 /* ConfigurationTableViewController.swift in Sources */,
 				90213122256A1B6C007FDF56 /* Equal-Sounds.xcdatamodeld in Sources */,
 				36D164992577BA430048D59E /* AudioController.swift in Sources */,
 				36A3FC9725861DBE0059BEA7 /* EqualizerSavedConfiguration+CoreDataProperties.swift in Sources */,
