@@ -150,7 +150,6 @@
                                         <connections>
                                             <outlet property="artistLabel" destination="gq0-zq-zjo" id="xdM-6N-mbi"/>
                                             <outlet property="songNameLabel" destination="DVw-Ip-vXh" id="bOw-xb-e5r"/>
-                                            <segue destination="FkA-d9-G9O" kind="show" identifier="NowPlayingSegue" id="Fer-en-69H"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -185,7 +184,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xi2-JE-kGc">
-                                <rect key="frame" x="0.0" y="580" width="414" height="133.5"/>
+                                <rect key="frame" x="0.0" y="531" width="414" height="133.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bGn-Nx-krO">
                                         <rect key="frame" x="164" y="0.0" width="86" height="61.5"/>
@@ -259,7 +258,7 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LBb-4Q-04w">
-                                <rect key="frame" x="4" y="92" width="406" height="373"/>
+                                <rect key="frame" x="4" y="92" width="406" height="324"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O8R-BY-rD5"/>
@@ -452,9 +451,6 @@
             <point key="canvasLocation" x="251" y="88"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Fer-en-69H"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="backward.fill" catalog="system" width="128" height="79"/>
         <image name="forward.fill" catalog="system" width="128" height="79"/>
