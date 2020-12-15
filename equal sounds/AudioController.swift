@@ -159,12 +159,22 @@ class AudioController
 		self.equalizer.adjust(at: index, to: gain)
     }
 	
+	func changeEqualizerConfiguration(to configuration: EqualizerConfiguration)
+	{
+		print("Hi! I am a stub and need to be completed [changeEqualizerConfiguration(to:)]")
+	}
+	
+	//MARK:- Metadata Operations
+	
 	func exportEqualizerConfiguration(as name: String) -> (EqualizerSavedConfiguration, [FrequencySetting])
 	{
 		self.equalizer.exportCurrentConfiguration(as: name)
 	}
 	
-	
+	func getNowPlayingMetadata()
+	{
+		print("Hi! I am a stub and need to be completed [getNowPlayingMetadata()]")
+	}
 	
 	//MARK:- System Event Handling
 	func setupNotifications()
