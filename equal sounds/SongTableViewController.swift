@@ -11,10 +11,15 @@ class SongTableViewController: UIViewController, UITableViewDataSource, UITableV
     var songs = [Song]()
 	let audioController = (UIApplication.shared.delegate as! AppDelegate).audioController
 	let songFileManager = SongFileManager()
-
-    override func viewDidLoad() {
+	@IBOutlet var tableView: UITableView!
+	
+	override func viewDidLoad() {
         super.viewDidLoad()
-
+		if let loadedSongs = songFileManager.loadSongFiles(in: songFileManager.urls(for: .documentDirectory, in: .userDomainMask).first!)
+		{
+			songs = loadedSongs
+			
+		}
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -34,7 +39,16 @@ class SongTableViewController: UIViewController, UITableViewDataSource, UITableV
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-       
+		let songSelected = songs[indexPath.row]
+		print("song table is trying to start player using \(songSelected.name)")
+		if let songFile = songFileManager.openFile(at: songSelected.url)
+		{
+			if audioController.isPlaying
+			{
+				audioController.stopPlayer()
+			}
+			try? audioController.startPlayer(using: songFile)
+		}
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,15 +61,10 @@ class SongTableViewController: UIViewController, UITableViewDataSource, UITableV
         return cell
 	}
 	
-	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) 
-	{
-		
-	}
-
 	@IBAction func openExternalFileSelectorButtonPressed(_ sender: UIBarButtonItem) 
 	{
-		let documentPicker = songFileManager.requestDocumentPicker()
-		present(documentPicker, animated: true) 
+		let documentPicker = try? songFileManager.requestDocumentPicker()
+		present(documentPicker!, animated: true) 
 		{ 
 			guard let songFile = self.songFileManager.loadSelectedFile() else {return}
 			self.audioController.stopPlayer()

@@ -26,7 +26,7 @@ class SongTableViewCell: UITableViewCell {
     func update(with song: Song)
     {
         songNameLabel.text = song.name
-        artistLabel.text = song.artist 
+        artistLabel.text = song.artist ?? " "
     }
 
 }

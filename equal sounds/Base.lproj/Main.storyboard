@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pua-DC-FdL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pua-DC-FdL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -120,7 +120,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="yxI-Vt-LZF">
-                                                    <rect key="frame" x="20" y="0.0" width="89" height="42"/>
+                                                    <rect key="frame" x="20" y="0.0" width="329.5" height="42"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVw-Ip-vXh">
                                                             <rect key="frame" x="0.0" y="0.0" width="89" height="20.5"/>
@@ -136,16 +136,17 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4o-bE-JEh">
-                                                    <rect key="frame" x="292" y="10" width="69" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button" image="music.note" catalog="system"/>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4o-bE-JEh">
+                                                    <rect key="frame" x="359.5" y="11" width="14.5" height="22"/>
+                                                    <state key="normal" image="music.note" catalog="system"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="yxI-Vt-LZF" secondAttribute="bottom" constant="1.5" id="4M7-xk-LW4"/>
                                                 <constraint firstItem="yxI-Vt-LZF" firstAttribute="leading" secondItem="YgS-8e-Uoi" secondAttribute="leading" constant="20" id="CER-a6-U6j"/>
-                                                <constraint firstAttribute="trailing" secondItem="yxI-Vt-LZF" secondAttribute="trailing" constant="305" id="db0-FU-2LK"/>
+                                                <constraint firstAttribute="trailing" secondItem="g4o-bE-JEh" secondAttribute="trailing" constant="40" id="Ry2-mR-tao"/>
+                                                <constraint firstItem="g4o-bE-JEh" firstAttribute="leading" secondItem="yxI-Vt-LZF" secondAttribute="trailing" constant="10" id="db0-FU-2LK"/>
+                                                <constraint firstItem="g4o-bE-JEh" firstAttribute="centerY" secondItem="YgS-8e-Uoi" secondAttribute="centerY" id="oaE-ZF-FAY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -177,6 +178,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Nuo-Wf-LFn" id="wNl-dZ-eVp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pmN-LE-mFg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -237,7 +241,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5B8-LE-Yz1" userLabel="playpause">
-                                                <rect key="frame" x="86" y="0.0" width="35.5" height="22"/>
+                                                <rect key="frame" x="86.5" y="0.0" width="34" height="22"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <state key="normal">
                                                     <imageReference key="image" image="playpause.fill" catalog="system" symbolScale="large"/>
@@ -820,7 +824,7 @@
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="music.note" catalog="system" width="97" height="128"/>
         <image name="music.note.list" catalog="system" width="128" height="115"/>
-        <image name="playpause.fill" catalog="system" width="128" height="70"/>
+        <image name="playpause.fill" catalog="system" width="128" height="73"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="speaker.wave.2.fill" catalog="system" width="128" height="90"/>
         <namedColor name="AccentColor">

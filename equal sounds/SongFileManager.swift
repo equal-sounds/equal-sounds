@@ -22,10 +22,49 @@ class SongFileManager: FileManager, UIDocumentPickerDelegate
 		lastDocumentSelected = myUrl
 	}
 	
-	func requestDocumentPicker() -> UIDocumentPickerViewController
+	func loadSongFiles(in directory: URL) -> [Song]?
 	{
-		let types = UTType.types(tag: "mp3", tagClass: UTTagClass.filenameExtension, conformingTo: nil)
-		let documentPickerController = UIDocumentPickerViewController(forOpeningContentTypes: types)
+		do{
+			let fileUrls = try contentsOfDirectory(atPath: directory.path)
+			var loadedSongs = [Song]()
+			for url in fileUrls
+			{
+				print("attempting to load data for \(url)")
+				print("\(directory.appendingPathComponent(url).path)")
+				if isValidSongUrl(for: directory.appendingPathComponent(url)), let song = fetchSongMetadata(for: directory.appendingPathComponent(url))
+				{
+					print("loaded data")
+					loadedSongs.append(song)
+				}
+			}
+			print("done loading data")
+			return (loadedSongs.count > 0) ? loadedSongs : nil
+		} catch {
+			return nil
+		}
+	}
+	
+	func fetchSongMetadata(for url: URL) -> Song?
+	{
+		let asset = AVAsset(url: url)
+		let metadata = asset.commonMetadata
+		let title = AVMetadataItem.metadataItems(from: metadata, filteredByIdentifier: .commonIdentifierTitle).first?.stringValue ?? url.lastPathComponent.description
+		let artist = AVMetadataItem.metadataItems(from: metadata, filteredByIdentifier: .commonIdentifierArtist).first?.stringValue
+		let albumName = AVMetadataItem.metadataItems(from: metadata, filteredByIdentifier: .commonIdentifierAlbumName).first?.stringValue
+		let albumImageData = AVMetadataItem.metadataItems(from: metadata, filteredByIdentifier: .commonIdentifierArtwork).first?.dataValue
+		let albumImage: UIImage? = albumImageData == nil ? nil : UIImage(data: albumImageData!)
+		let duration: Int = Int(asset.duration.seconds)
+		let song = Song(name: title, artist: artist, albumName: albumName, duration: duration, albumImage: albumImage, url: url)
+		print("loaded song \(title)")
+		return song
+	}
+	
+	func requestDocumentPicker() throws -> UIDocumentPickerViewController 
+	{
+		//let types = UTType.types(tag: "mp3", tagClass: UTTagClass.filenameExtension, conformingTo: nil)
+		//print(types)
+		let documentPickerController = UIDocumentPickerViewController(forOpeningContentTypes: [UTType(filenameExtension: "data")!])
+		documentPickerController.directoryURL = try url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
 		documentPickerController.delegate = self
 		return documentPickerController
 	}

@@ -16,6 +16,7 @@ class AudioController
     let equalizer: Equalizer
 	var headphonesConnected: Bool = false
 	var isPrepared: Bool = false
+	var isPlaying: Bool { player.isPlaying }
     
     init()
     {
@@ -83,6 +84,7 @@ class AudioController
 		{
 			print("started player")
 		} else {
+			print("failed to start player")
 			self.stopPlayer()
 		}
 	}
