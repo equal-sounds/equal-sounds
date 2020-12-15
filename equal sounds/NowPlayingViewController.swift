@@ -10,7 +10,7 @@ import UIKit
 class NowPlayingViewController: UIViewController {
     
     
-    let audioController = AudioController()
+    let audioController = (UIApplication.shared.delegate as! AppDelegate).audioController
     @IBOutlet var songNameLabel: UILabel!
     @IBOutlet var artistLabel: UILabel!
     @IBOutlet var albumLabel: UILabel!

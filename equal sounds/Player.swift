@@ -102,15 +102,16 @@ class Player: AVAudioPlayerNode
 		canBeResumed = true
 	}
 	
-	func play(file url: URL)
+	func play(file: AVAudioFile)
 	{
-		play(file: url, at: nil)
+		play(file: file, at: nil)
 	}
 	
-	func play(file url: URL, at when: AVAudioTime?)
+	func play(file: AVAudioFile, at when: AVAudioTime?)
 	{
 		stop()
-		openFile(at: url)
+		audioFile = file
+		self.scheduleFile(audioFile!, at: nil, completionHandler: nil)
 		play(at: when)
 	}
 	

@@ -73,12 +73,12 @@ class AudioController
     }
 	
 	//call in background
-	func startPlayer(using fileUrl: URL) throws
+	func startPlayer(using file: AVAudioFile) throws
 	{
 		self.engine.prepare()
 		self.isPrepared = true
 		try self.engine.start()
-		self.player.play(file: fileUrl)
+		self.player.play(file: file)
 		if self.player.isPlaying
 		{
 			print("started player")

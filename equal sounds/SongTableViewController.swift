@@ -9,6 +9,8 @@ import UIKit
 
 class SongTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var songs = [Song]()
+	let audioController = (UIApplication.shared.delegate as! AppDelegate).audioController
+	let songFileManager = SongFileManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +24,11 @@ class SongTableViewController: UIViewController, UITableViewDataSource, UITableV
 
     // MARK: - Table view data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            if section == 0 {
-                return songs.count
-            }
-            return 0
-        }
+		if section == 0 {
+			return songs.count
+		}
+		return 0
+	}
 
    
 
@@ -39,9 +41,24 @@ class SongTableViewController: UIViewController, UITableViewDataSource, UITableV
         // Configure the cell...
 
         return cell
-    }
-    
-    // MARK: - Navigation
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) 
+	{
+		
+	}
+
+	@IBAction func openExternalFileSelectorButtonPressed(_ sender: UIBarButtonItem) 
+	{
+		let documentPicker = songFileManager.requestDocumentPicker()
+		present(documentPicker, animated: true) 
+		{ 
+			guard let songFile = self.songFileManager.loadSelectedFile() else {return}
+			self.audioController.stopPlayer()
+			try? self.audioController.startPlayer(using: songFile)
+		}
+	}
+	// MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     /*

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3696274A25888D7400ABCC29 /* SongFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3696274925888D7400ABCC29 /* SongFileManager.swift */; };
+		3696275025888E1C00ABCC29 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3696274F25888E1C00ABCC29 /* NowPlayingViewController.swift */; };
+		3696275325888E3000ABCC29 /* SongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3696275225888E3000ABCC29 /* SongTableViewController.swift */; };
 		36A3FC702585F1620059BEA7 /* EqualizerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3FC6F2585F1620059BEA7 /* EqualizerConfiguration.swift */; };
 		36A3FC9625861DBE0059BEA7 /* EqualizerSavedConfiguration+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3FC9225861DBE0059BEA7 /* EqualizerSavedConfiguration+CoreDataClass.swift */; };
 		36A3FC9725861DBE0059BEA7 /* EqualizerSavedConfiguration+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3FC9325861DBE0059BEA7 /* EqualizerSavedConfiguration+CoreDataProperties.swift */; };
@@ -30,12 +33,14 @@
 		905594C025889A2400040189 /* ConfigurationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905594BF25889A2400040189 /* ConfigurationTableViewController.swift */; };
 		905594C425889B8300040189 /* ConfigurationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905594C325889B8300040189 /* ConfigurationTableViewCell.swift */; };
 		90F1FE2D2585ABFB002BCFB2 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F1FE2C2585ABFB002BCFB2 /* Song.swift */; };
-		90F1FE302585ACAE002BCFB2 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F1FE2F2585ACAE002BCFB2 /* NowPlayingViewController.swift */; };
-		90F1FE332585B6AB002BCFB2 /* SongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F1FE322585B6AB002BCFB2 /* SongTableViewController.swift */; };
 		90F1FE362585B7B7002BCFB2 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F1FE352585B7B7002BCFB2 /* SongTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3696274925888D7400ABCC29 /* SongFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongFileManager.swift; sourceTree = "<group>"; };
+		3696274F25888E1C00ABCC29 /* NowPlayingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
+		3696275225888E3000ABCC29 /* SongTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewController.swift; sourceTree = "<group>"; };
+		3696275D2588D3C700ABCC29 /* equal sounds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "equal sounds.entitlements"; sourceTree = "<group>"; };
 		36A3FC6F2585F1620059BEA7 /* EqualizerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualizerConfiguration.swift; sourceTree = "<group>"; };
 		36A3FC9225861DBE0059BEA7 /* EqualizerSavedConfiguration+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EqualizerSavedConfiguration+CoreDataClass.swift"; sourceTree = "<group>"; };
 		36A3FC9325861DBE0059BEA7 /* EqualizerSavedConfiguration+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EqualizerSavedConfiguration+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -61,8 +66,6 @@
 		905594BF25889A2400040189 /* ConfigurationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationTableViewController.swift; sourceTree = "<group>"; };
 		905594C325889B8300040189 /* ConfigurationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationTableViewCell.swift; sourceTree = "<group>"; };
 		90F1FE2C2585ABFB002BCFB2 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
-		90F1FE2F2585ACAE002BCFB2 /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
-		90F1FE322585B6AB002BCFB2 /* SongTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewController.swift; sourceTree = "<group>"; };
 		90F1FE352585B7B7002BCFB2 /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +104,7 @@
 		90213105256A190A007FDF56 /* equal sounds */ = {
 			isa = PBXGroup;
 			children = (
+				3696275D2588D3C700ABCC29 /* equal sounds.entitlements */,
 				905594BC2588972B00040189 /* AddConfigurationViewController.swift */,
 				905594BF25889A2400040189 /* ConfigurationTableViewController.swift */,
 				905594C325889B8300040189 /* ConfigurationTableViewCell.swift */,
@@ -112,8 +116,8 @@
 				90213108256A190A007FDF56 /* SceneDelegate.swift */,
 				9021310C256A190A007FDF56 /* Main.storyboard */,
 				90F1FE2C2585ABFB002BCFB2 /* Song.swift */,
-				90F1FE2F2585ACAE002BCFB2 /* NowPlayingViewController.swift */,
-				90F1FE322585B6AB002BCFB2 /* SongTableViewController.swift */,
+				3696274F25888E1C00ABCC29 /* NowPlayingViewController.swift */,
+				3696275225888E3000ABCC29 /* SongTableViewController.swift */,
 				90F1FE352585B7B7002BCFB2 /* SongTableViewCell.swift */,
 				9021310F256A190C007FDF56 /* Assets.xcassets */,
 				90213111256A190C007FDF56 /* LaunchScreen.storyboard */,
@@ -123,6 +127,7 @@
 				36B336C325859E080089E293 /* Equalizer.swift */,
 				36B336C72585B5AA0089E293 /* Player.swift */,
 				36A3FC6F2585F1620059BEA7 /* EqualizerConfiguration.swift */,
+				3696274925888D7400ABCC29 /* SongFileManager.swift */,
 			);
 			path = "equal sounds";
 			sourceTree = "<group>";
@@ -201,21 +206,22 @@
 				36A3FC702585F1620059BEA7 /* EqualizerConfiguration.swift in Sources */,
 				36A3FC9825861DBE0059BEA7 /* FrequencySetting+CoreDataClass.swift in Sources */,
 				905594C425889B8300040189 /* ConfigurationTableViewCell.swift in Sources */,
-				90F1FE302585ACAE002BCFB2 /* NowPlayingViewController.swift in Sources */,
 				36D164B52577DB7E0048D59E /* EqualizerViewController.swift in Sources */,
 				90213107256A190A007FDF56 /* AppDelegate.swift in Sources */,
 				36B336C82585B5AA0089E293 /* Player.swift in Sources */,
+				3696274A25888D7400ABCC29 /* SongFileManager.swift in Sources */,
 				36D164AC2577BF5C0048D59E /* EqualizerBand.swift in Sources */,
 				905594BD2588972B00040189 /* AddConfigurationViewController.swift in Sources */,
 				90F1FE2D2585ABFB002BCFB2 /* Song.swift in Sources */,
 				905594C025889A2400040189 /* ConfigurationTableViewController.swift in Sources */,
 				90213122256A1B6C007FDF56 /* Equal-Sounds.xcdatamodeld in Sources */,
 				36D164992577BA430048D59E /* AudioController.swift in Sources */,
+				3696275325888E3000ABCC29 /* SongTableViewController.swift in Sources */,
 				36A3FC9725861DBE0059BEA7 /* EqualizerSavedConfiguration+CoreDataProperties.swift in Sources */,
 				36D164982577BA430048D59E /* Thread+Async.swift in Sources */,
 				90F1FE362585B7B7002BCFB2 /* SongTableViewCell.swift in Sources */,
+				3696275025888E1C00ABCC29 /* NowPlayingViewController.swift in Sources */,
 				36A3FC9625861DBE0059BEA7 /* EqualizerSavedConfiguration+CoreDataClass.swift in Sources */,
-				90F1FE332585B6AB002BCFB2 /* SongTableViewController.swift in Sources */,
 				36B336C425859E080089E293 /* Equalizer.swift in Sources */,
 				90213109256A190A007FDF56 /* SceneDelegate.swift in Sources */,
 				36A3FC9925861DBE0059BEA7 /* FrequencySetting+CoreDataProperties.swift in Sources */,
@@ -366,6 +372,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "equal sounds/equal sounds.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GUYPJD4NUE;
 				INFOPLIST_FILE = "equal sounds/Info.plist";
@@ -386,6 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "equal sounds/equal sounds.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GUYPJD4NUE;
 				INFOPLIST_FILE = "equal sounds/Info.plist";

@@ -37,7 +37,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         })
         return container
-    }()
+    }() 
+	
+	private lazy var ac = AudioController()
+	var audioController: AudioController { ac }
 
     // MARK: - Core Data Saving support
 

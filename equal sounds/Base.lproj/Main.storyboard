@@ -169,7 +169,14 @@
                             <constraint firstItem="Nuo-Wf-LFn" firstAttribute="top" secondItem="CYx-7D-gON" secondAttribute="top" id="cGN-2z-B6B"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="er2-4C-RCD"/>
+                    <navigationItem key="navigationItem" id="er2-4C-RCD">
+                        <barButtonItem key="leftBarButtonItem" id="uZp-N1-fVU">
+                            <imageReference key="image" image="arrow.up.right.square" catalog="system" symbolScale="large"/>
+                            <connections>
+                                <action selector="openExternalFileSelectorButtonPressed:" destination="VVE-Mk-uvc" id="ses-E7-bm8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pmN-LE-mFg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -803,6 +810,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.up.right.square" catalog="system" width="128" height="114"/>
         <image name="backward.fill" catalog="system" width="128" height="79"/>
         <image name="forward.fill" catalog="system" width="128" height="79"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>

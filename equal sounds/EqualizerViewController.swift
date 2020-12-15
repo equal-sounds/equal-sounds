@@ -50,8 +50,7 @@ class EqualizerViewController: UIViewController
     @IBOutlet var eightKHZSlider: UISlider!
     @IBOutlet var sixteenKHZSlider: UISlider!
 	var savedConfigurations: [EqualizerConfiguration]! //loaded using CoreData in load function
-    let audioController = AudioController() // this should actually be initialized in app's primary viewDidLoad and passed around during segues
-	
+    let audioController = (UIApplication.shared.delegate as! AppDelegate).audioController // fetch singleton AudioController instance
 	// The config selector should probably be on the same screen as the EQ sliders, so that you can see changes. I don't know if we will get to the visual rendering of the audio graph, we will need to look into how to do it. I know there are resources, stackoverflows, etc. out there on how to do that sort of thing but i dont know the time consumption of it
 	
     override func viewDidLoad()
@@ -81,11 +80,11 @@ class EqualizerViewController: UIViewController
 		savedConfigurations = []
         // Do any additional setup after loading the view.
 		loadSavedConfigurations()
-        async
+		/*async
         {
 			// demo & testing only as far as i'm concerned - we dont need sound to start whenever the eq gets opened
 			try? self.audioController.startPlayer(using: FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("song").appendingPathExtension("mp3"))
-        }
+        }*/
     }
 	
 	@IBAction func eqSliderValueChanged(_ sender: UISlider)
