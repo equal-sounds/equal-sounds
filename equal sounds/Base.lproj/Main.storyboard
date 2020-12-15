@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="od7-JB-Kf9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="od7-JB-Kf9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -97,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957.9710144927537" y="87.723214285714278"/>
+            <point key="canvasLocation" x="-1133" y="931"/>
         </scene>
         <!--Player-->
         <scene sceneID="XHN-Zf-lBf">
@@ -174,9 +174,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pmN-LE-mFg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1958" y="759"/>
+            <point key="canvasLocation" x="-257" y="931"/>
         </scene>
-        <!--Now Playing View Controller-->
+        <!--Now Playing-->
         <scene sceneID="bQk-Lv-eYA">
             <objects>
                 <viewController id="FkA-d9-G9O" customClass="nowPlayingViewController" customModule="equal_sounds" customModuleProvider="target" sceneMemberID="viewController">
@@ -214,7 +214,7 @@
                                         </subviews>
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="StP-3C-uiK">
-                                        <rect key="frame" x="7.5" y="71.5" width="399" height="31"/>
+                                        <rect key="frame" x="-2" y="71.5" width="418" height="31"/>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Byb-7r-jTk">
                                         <rect key="frame" x="103.5" y="111.5" width="207" height="22"/>
@@ -231,7 +231,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5B8-LE-Yz1" userLabel="playpause">
-                                                <rect key="frame" x="86.5" y="0.0" width="34" height="22"/>
+                                                <rect key="frame" x="86" y="0.0" width="35.5" height="22"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <state key="normal">
                                                     <imageReference key="image" image="playpause.fill" catalog="system" symbolScale="large"/>
@@ -276,6 +276,7 @@
                             <constraint firstItem="O8R-BY-rD5" firstAttribute="trailing" secondItem="LBb-4Q-04w" secondAttribute="trailing" constant="4" id="vAe-ag-diu"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Now Playing" image="music.note.list" catalog="system" selectedImage="music.note.list" id="x1t-Wg-GR3"/>
                     <navigationItem key="navigationItem" id="pca-Uu-TAN"/>
                     <connections>
                         <outlet property="albumLabel" destination="2cC-qZ-7Yn" id="KFh-LP-Xfa"/>
@@ -286,7 +287,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RtV-zo-BfK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="H1T-yL-nRd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2697" y="759"/>
+            <point key="canvasLocation" x="703" y="931"/>
         </scene>
         <!--Equalizer-->
         <scene sceneID="SJz-d4-bnV">
@@ -408,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZU-lL-9Ft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2747.826086956522" y="87.723214285714278"/>
+            <point key="canvasLocation" x="1512" y="931"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wbq-0U-ag9">
@@ -426,7 +427,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JfZ-Ab-qi6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="87.723214285714278"/>
+            <point key="canvasLocation" x="-607" y="88"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZBT-3b-dcf">
@@ -443,19 +444,24 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ljT-ZU-r3U"/>
                         <segue destination="VVE-Mk-uvc" kind="relationship" relationship="viewControllers" id="bTM-dT-baD"/>
                         <segue destination="AR3-r6-fqL" kind="relationship" relationship="viewControllers" id="z1D-jI-L43"/>
+                        <segue destination="FkA-d9-G9O" kind="relationship" relationship="viewControllers" id="ijJ-yA-8JH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDJ-Qe-4Vd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="87.723214285714278"/>
+            <point key="canvasLocation" x="251" y="88"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Fer-en-69H"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="backward.fill" catalog="system" width="128" height="79"/>
         <image name="forward.fill" catalog="system" width="128" height="79"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="music.note" catalog="system" width="97" height="128"/>
-        <image name="playpause.fill" catalog="system" width="128" height="73"/>
+        <image name="music.note.list" catalog="system" width="128" height="115"/>
+        <image name="playpause.fill" catalog="system" width="128" height="70"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="speaker.wave.2.fill" catalog="system" width="128" height="90"/>
         <systemColor name="labelColor">
