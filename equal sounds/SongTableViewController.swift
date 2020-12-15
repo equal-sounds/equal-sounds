@@ -30,6 +30,10 @@ class SongTableViewController: UIViewController, UITableViewDataSource, UITableV
 
    
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+       
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = indexPath.row
